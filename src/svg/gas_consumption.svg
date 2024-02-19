@@ -1,0 +1,17 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M35 45V50.999H43M29 45V50.999H21M43 56.999H21" stroke="#2E3237" stroke-width="2" stroke-miterlimit="16"/>
+    <path d="M49 51L55 51V57H49" stroke="#2E3237" stroke-width="2" stroke-miterlimit="16"/>
+    <path d="M15 57L9 57L9 51L15 51" stroke="#2E3237" stroke-width="2" stroke-miterlimit="16"/>
+    <path d="M29 39V33" stroke="#2E3237" stroke-width="2" stroke-miterlimit="16"/>
+    <path d="M35 39V33" stroke="#2E3237" stroke-width="2" stroke-miterlimit="16"/>
+    <rect x="15" y="49" width="6" height="10" rx="1" stroke="#2E3237" stroke-width="2"/>
+    <rect x="43" y="49" width="6" height="10" rx="1" stroke="#2E3237" stroke-width="2"/>
+    <rect x="27" y="39" width="10" height="6" rx="1" stroke="#2E3237" stroke-width="2"/>
+    <circle cx="32" cy="19" r="14" stroke="#2E3237" stroke-width="2"/>
+    <path d="M23 19H18" stroke="#2E3237" stroke-width="2"/>
+    <path d="M46 19H41" stroke="#2E3237" stroke-width="2"/>
+    <path d="M32 10L32 5" stroke="#2E3237" stroke-width="2"/>
+    <path d="M32 33L32 28" stroke="#2E3237" stroke-width="2"/>
+    <circle cx="32" cy="19" r="2" stroke="#2E3237" stroke-width="2"/>
+    <path d="M32.9381 18.0626L37.1806 13.8199" stroke="#2E3237" stroke-width="2"/>
+</svg>

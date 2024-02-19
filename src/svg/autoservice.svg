@@ -1,0 +1,23 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M49.3167 8.8695L53.382 17L10.618 17L14.6833 8.86951C15.869 6.49802 18.2929 5 20.9443 5L43.0557 5C45.7071 5 48.131 6.49801 49.3167 8.8695Z" stroke="#2E3237" stroke-width="2"/>
+<path d="M19.5771 35.864C19.645 35.3689 20.068 35 20.5678 35H43.4322C43.932 35 44.355 35.3689 44.4229 35.864L44.8534 39H19.1466L19.5771 35.864Z" stroke="#2E3237" stroke-width="2"/>
+<path d="M5 24C5 23.4477 5.44772 23 6 23H14C14.5523 23 15 23.4477 15 24C15 25.6569 13.6569 27 12 27H5V24Z" stroke="#2E3237" stroke-width="2"/>
+<path d="M49 24C49 23.4477 49.4477 23 50 23H58C58.5523 23 59 23.4477 59 24V27H52C50.3431 27 49 25.6569 49 24Z" stroke="#2E3237" stroke-width="2"/>
+<path d="M55 15C55 14.4477 55.4477 14 56 14H58C58.5523 14 59 14.4477 59 15C59 15.5523 58.5523 16 58 16H55V15Z" stroke="#2E3237" stroke-width="2"/>
+<path d="M5 15C5 14.4477 5.44772 14 6 14H8C8.55228 14 9 14.4477 9 15V16H6C5.44772 16 5 15.5523 5 15Z" stroke="#2E3237" stroke-width="2"/>
+<path d="M59 24.9972V23.8259C59 23.2953 58.7892 22.7865 58.4139 22.4114L53 17" stroke="#2E3237" stroke-width="2"/>
+<path d="M5 24.9972V23.8259C5 23.2953 5.21084 22.7865 5.58611 22.4114L11 17" stroke="#2E3237" stroke-width="2"/>
+<path d="M5 32V27" stroke="#2E3237" stroke-width="2"/>
+<path d="M59 32V27" stroke="#2E3237" stroke-width="2"/>
+<line x1="18" y1="23" x2="46" y2="23" stroke="#2E3237" stroke-width="2"/>
+<line x1="21" y1="27" x2="39" y2="27" stroke="#2E3237" stroke-width="2"/>
+<line x1="41" y1="27" x2="43" y2="27" stroke="#2E3237" stroke-width="2"/>
+<circle cx="53" cy="33" r="2" stroke="#2E3237" stroke-width="2"/>
+<circle cx="11" cy="33" r="2" stroke="#2E3237" stroke-width="2"/>
+<path d="M5 35L5 41C5 42.1046 5.89543 43 7 43H11C12.1046 43 13 42.1046 13 41V38.4286" stroke="#2E3237" stroke-width="2"/>
+<path d="M59 35L59 41C59 42.1046 58.1046 43 57 43H53C51.8954 43 51 42.1046 51 41V38.4286" stroke="#2E3237" stroke-width="2"/>
+<path d="M5 29V35C5 37.2091 6.79086 39 9 39H55C57.2091 39 59 37.2091 59 35V29" stroke="#2E3237" stroke-width="2"/>
+<path d="M32 39V53" stroke="#2E3237" stroke-width="2" stroke-miterlimit="16"/>
+<path d="M12 59H52" stroke="#2E3237" stroke-width="2" stroke-miterlimit="16"/>
+<path d="M21 54C21 53.4477 21.4477 53 22 53H42C42.5523 53 43 53.4477 43 54V59H21V54Z" stroke="#2E3237" stroke-width="2"/>
+</svg>

@@ -1,0 +1,18 @@
+
+-
+        var page = 'О компании'
+//- block varsHome 
+
+.site-pages
+    .container
+        .row.site-pages__wrapper
+            .col-12
+            h1.col-12.page-top__title.page-title.offset-xl-1  #{page}
+            ul.d-flex
+                li.action
+                a(href="./") #{page}
+                li
+                span Вакансии
+    +position-background("pattern-page", 'icon-background')
+
+            block content 

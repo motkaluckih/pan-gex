@@ -1,0 +1,29 @@
+// .nav ====================================================================================================
+// .nav {
+// }
+
+// .menu ====================================================================================================
+.menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+
+  li {
+    color: $color-dark-045;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.0015em;
+
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+
+    &.active {
+      color: $color-second-default;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

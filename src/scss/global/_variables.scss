@@ -1,0 +1,215 @@
+// * ==================================================================================================
+// * VARIABLES
+// * ==================================================================================================
+
+// Fonts ==============================================================================================
+// $font-primary: "Museo Sans Cyrl", sans-serif;
+$font-primary: "Manrope", sans-serif;
+
+// Colors =============================================================================================
+$color-light: #fff;
+$color-light-065: rgba(#fff, 0.65);
+$color-titan-white: #e8e9ff;
+$color-lily-white: #edfaff;
+$color-lavender-blush: #ffe7eb;
+$color-hint-of-green: #f0fff7;
+$color-black: #000;
+$color-dark: #2e3237;
+$color-dark-072: rgba($color-dark, 0.72);
+$color-dark-056: rgba($color-dark, 0.56);
+$color-dark-045: rgba($color-dark, 0.45);
+$color-dark-036: rgba($color-dark, 0.36);
+$color-dark-023: rgba($color-dark, 0.23);
+$color-dark-013: rgba($color-dark, 0.13);
+$color-primary-default: #292d78;
+$color-primary-dark: #000456;
+$color-primary-light: rgba($color-titan-white, 0.75);
+$color-second-default: #00a3da;
+$color-second-dark: #0078b3;
+$color-blue-400: #009FE3;
+$color-second-light: rgba($color-lily-white, 0.75);
+$color-red-default: #ed153e;
+$color-red-dark: #cd0027;
+$color-red-light: rgba($color-lavender-blush, 0.75);
+$color-green-default: #34be76;
+$color-green-dark: #00a14d;
+$color-green-700: #3AAA35;
+$color-green-light: rgba($color-hint-of-green, 0.75);
+$color-gray-100: #f8f8ff;
+$color-gray-200: #f5f7f9;
+$color-gray-300: #e4e4f6;
+$colorBlue: #1A2141;
+$colorOrange: #E94E1B;
+$colorGraiOpaciity: #D6DDE4;
+$colorBgHeader:#F5F7FA;
+$colorBgGray:#E7EBF0;
+$colorRgbaOpacity: rgba(214, 221, 228, 0.60);
+$colorGrayOpacity30:#B9BCC04D;
+$colorDarkGrey: #B9BCC0;
+$color-gray-400: #B8C3D0;
+$color-gray-600: #959AAA;
+$color-gray-700: #5F6D82;
+
+// Properties =========================================================================================
+$transition: 0.3s ease-out;
+$radius: 14px;
+//border
+$borderGray: 1px solid $colorGraiOpaciity;
+$borderGrayOpacity: 1px solid $colorRgbaOpacity;
+$borderDark: 1px solid $color-dark-023;
+
+/*Transition*/
+$short: .3s ease-in-out;
+$midle: .5s;
+
+// Mixins =============================================================================================
+@mixin body {
+  color: $color-dark;
+  background-color: $color-gray-200;
+
+  @include body-text;
+}
+
+@mixin body-text {
+  font-weight: 300;
+  font-size: 18px;
+  font-family: $font-primary;
+  line-height: 1.56;
+  letter-spacing: -0.35px;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+@mixin title-1 {
+  font-weight: 500;
+  font-size: 100px;
+  font-family: $font-primary;
+  line-height: 140%;
+  text-transform: uppercase;
+
+  @include media-breakpoint-down(xl) {
+    font-size: 56px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: 46px;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 36px;
+  }
+}
+
+@mixin title-2 {
+  font-size: 13px;
+  font-style: normal;
+  font-family: $font-primary;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+
+  @include media-breakpoint-down(xl) {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0.6px;
+  }
+
+  // @include media-breakpoint-down(lg) {
+  //   font-weight: 600;
+  //   font-size: 32px;
+  // }
+
+  // @include media-breakpoint-down(md) {
+  //   font-weight: 600;
+  //   font-size: 26px;
+  // }
+  // @include media-breakpoint-down(md) {        
+  //   font-size: 12px;
+  //   font-weight: 700;
+  //   line-height: 14px;
+  //   letter-spacing: 0.6px;
+	// }
+}
+
+@mixin title-3 {
+  font-weight: 600;
+  font-size: 36px;
+  font-family: $font-primary;
+  line-height: 1.17;
+  letter-spacing: -0.35px;
+
+  @include media-breakpoint-down(xl) {
+    font-size: 31px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: 26px;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 21px;
+  }
+}
+
+@mixin title-4 {
+  font-weight: 600;
+  font-size: 28px;
+  font-family: $font-primary;
+  line-height: 1.29;
+  letter-spacing: -0.35px;
+
+  @include media-breakpoint-down(xl) {
+    font-size: 26px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: 23px;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 21px;
+    line-height: 1.14;
+  }
+}
+
+@mixin title-5 {
+  font-weight: 600;
+  font-size: 21px;
+  font-family: $font-primary;
+  line-height: 1.52;
+  letter-spacing: -0.35px;
+
+  @include media-breakpoint-down(lg) {
+    font-weight: 600;
+    font-size: 19px;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+
+@mixin title-6 {
+  font-weight: 500;
+  font-size: 72px;
+  color: $colorBlue;
+  line-height: 1;
+
+  @include media-breakpoint-down(lg) {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1;
+  }
+
+}

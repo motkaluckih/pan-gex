@@ -1,0 +1,215 @@
+.our-works{
+    padding: 110px 0 100px;
+    @include media-breakpoint-down(xl) {
+        padding: 20px 0 60px;
+    }
+
+    //стили для страницы статьи(blog)
+    &.our-works--articles {
+        padding-bottom: 145px;
+        @include media-breakpoint-down(xl) {
+            padding-bottom: 60px;
+        }
+    }
+    &__interface  {
+        @include media-breakpoint-down(xl) {
+            gap: 20px;
+        }
+    }
+    &__top {
+        @include section-border;
+    }
+    &__wrapper {
+        padding-bottom: 102px;
+        @include media-breakpoint-down(xl) {
+            padding-bottom: 40px;
+        }
+    }
+    &__interface {
+        padding: 30px 0 126px;
+        @include media-breakpoint-down(xl) {
+            padding: 40px 0 60px;
+        }
+    }
+
+    &__img-block{
+        position: absolute;
+        top: 0;
+        display: none;
+        width: 90%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        transition: visibility $short;
+    }
+    // button.button--animation{
+    //     position: absolute;
+    // }
+    ul.our-works__list {
+        gap: 90px 142px;
+        // @include media-breakpoint-down(lg) {
+            //     padding: 0 10px;
+            // }
+        }
+        .our-works__list,
+        ul {
+            @include list-reset; 
+            gap: 90px 0;
+            margin-bottom: 90px;
+            @include media-breakpoint-down(xl) {
+                margin-bottom: 44px;
+                gap: 50px 0;
+        }
+        @include media-breakpoint-down(lg) {
+            // padding: 0 10px;
+            gap: 30px 0;
+        }
+    }
+    
+    // ul {
+    //     gap: 90px 140px;
+    // }
+    ul li:nth-child(odd){
+        margin-right: calc(140/1226*100%);
+    }
+    li,
+    .our-works__item {
+        position: relative;
+        padding: 0;
+        &:nth-child(odd){
+            margin-right: calc(140/1226*100%);
+        }
+    }
+
+    li.our-works__item {
+        display: flex;
+    }
+
+    .our-works__item{
+        cursor: pointer;
+    }
+    &__bottom{
+        width: calc(1226/1340*100%);
+        @include media-breakpoint-down(xl) {
+           width: 100%;
+        }
+    }
+
+    h3 {
+        display: block;
+        max-width: 432px;
+        @include fontCompressor(20px, 500, 26px, -0.16px);
+        @include media-breakpoint-down(lg) {
+          @include fontCompressor(16px, 500, 20px, -0.08px);
+        }
+    }
+
+    &__btn-img {
+      position: relative;
+      transition: opacity $short;
+        &::before {
+            content: "";
+            position: absolute;
+            display: flex;
+            top: 50%;
+            left: 33%;
+            height: 70px;
+            width: 145px;
+            color: #fff;
+            opacity: 0;
+            background-image: url("../img/button.svg");
+            transition: opacity $short;
+            z-index: 1;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            display: flex;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            background-color: #393e4591;
+            transition: opacity $short, background-color $short;
+        }
+
+        &:hover::after,
+        &:hover::before {
+            opacity: 1;
+        }
+
+        margin-bottom: 30px;
+        @include media-breakpoint-down(xl) {
+            margin-bottom: 12px;
+            width: 100%;
+            &::before {
+                left: 38%;
+            }
+            // max-height: 330px;
+          }
+
+          @include media-breakpoint-down(sm) {
+            &::before {
+                left: 31%;                
+            }
+
+          }
+          
+
+        //   @include media-breakpoint-down(lg) {
+        //     max-height: 300px;
+        //   }
+        //   @include media-breakpoint-down(md) {
+        //     max-height: 255px;
+        //   }
+        
+    }
+    button.button--bottom {
+        width: 100%;
+        padding: 14px 30px;
+        @include fontCompressor(16px, 600, 22px, 0.2px);
+        @include media-breakpoint-down(xl) {
+            padding: 14px 0;
+            @include fontCompressor(13px, 600, 13px, 0.2px);
+        }
+    }
+
+    span {
+        color: $colorDarkGrey;
+        @include fontCompressor(14px, 500, 14px, 0.2px);
+        @include media-breakpoint-down(xl) {
+            @include fontCompressor(14px, 500, 14px, 0.2px);
+        }
+    }
+
+    .news-orange{
+        color: $colorOrange;
+    }
+
+    &__btn-dom  {
+        padding: 9px 0;
+        border-top: $borderGray;
+        border-bottom: $borderGray;
+        @include media-breakpoint-down(xl) {
+            padding: 4px 0;
+        }
+    }
+    &_group {
+        padding: 0;
+        padding-top: 26px;
+        margin-bottom: 18px;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        @include media-breakpoint-down(xl) {
+            max-height: 400px;
+        }
+        @include media-breakpoint-down(lg) {
+            max-height: 350px;
+        }
+    }
+
+}

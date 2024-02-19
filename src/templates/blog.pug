@@ -1,0 +1,74 @@
+extends layouts/_default
+
+block vars
+    - let pageTitle = "Сеть газовых заправок";
+    - let currentPage = "blog";
+
+block content
+
+    .site-pages.site-pages-delivery
+        .container
+            .row.site-pages__wrapper
+                .col-10
+                h1.col-10.page-top__title.page-title  Статьи
+        +position-background("pattern-page", 'icon-background')
+    .our-works.our-works--articles
+        .container 
+            .row
+                .our-works__interface.d-flex.flex-row.flex-wrap
+                        .col-12.col-xl-3.col-lg-6
+                            label.form-label
+                                span Рубрика
+                            select.form-select
+                                option(value='1') Все
+                                option(value='2') Остальные
+                        .col-12.col-xl-3.col-lg-6
+                            label.form-label
+                                span Год
+                            select.form-select
+                                option(value='1') 2023
+                                option(value='2') 2022
+            .row
+                .our-works__bottom
+                    .col-12.col-xl-12.our-works__list.d-flex.flex-wrap
+                        a.our-works__item.col-12.col-xl-5.flex-column 
+                            img(src="img/articles1.jpg", alt="Фото человека за рулем автомобиля")
+                            .our-works_group.d-flex.justify-content-between
+                                span.news-orange Новости
+                                span 6 июн 2023
+                            h3 На какие автомобили невозможно установить ГБО?
+                        a.our-works__item.col-12.col-xl-5.flex-column 
+                            img(src="img/articles2.jpg", alt="Фото заправка автомобиля")
+                            .our-works_group.d-flex.justify-content-between
+                                span.news-orange Новости
+                                span 6 июн 2023
+                            h3 Основные правила техники безопасности при эксплуатации авто с ГБО
+                        a.our-works__item.col-12.col-xl-5.flex-column 
+                            img(src="img/articles1.jpg", alt="Фото человека за рулем автомобиля")
+                            .our-works_group.d-flex.justify-content-between
+                                span.news-orange Новости
+                                span 6 июн 2023
+                            h3 На какие автомобили невозможно установить ГБО?
+                        a.our-works__item.col-12.col-xl-5.flex-column 
+                            img(src="img/articles2.jpg", alt="Фото заправка автомобиля")
+                            .our-works_group.d-flex.justify-content-between
+                                span.news-orange Новости
+                                span 6 июн 2023
+                            h3 Основные правила техники безопасности при эксплуатации авто с ГБО
+                        a.our-works__item.col-12.col-xl-5.flex-column 
+                            img(src="img/articles1.jpg", alt="Фото человека за рулем автомобиля")
+                            .col-12.our-works_group.d-flex.justify-content-between
+                                span.news-orange Новости
+                                span 6 июн 2023
+                            h3 На какие автомобили невозможно установить ГБО?
+                        a.our-works__item.col-12.col-xl-5.flex-column 
+                            img(src="img/articles2.jpg", alt="Фото заправка автомобиля")
+                            .col-12.our-works_group.d-flex.justify-content-between
+                                span.news-orange Новости
+                                span 6 июн 2023
+                            h3 Основные правила техники безопасности при эксплуатации авто с ГБО
+                    .col-12.our-works__btn-dom.d-flex.justify-content-center 
+                        button.col-5 Показать ещё
+    include components/_request
+
+    block scripts

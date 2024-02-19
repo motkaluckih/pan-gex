@@ -1,0 +1,58 @@
+extends layouts/_default
+
+block vars
+  - let pageTitle = "О компании";
+  - let currentPage = "about";
+
+block content
+
+  .site-pages
+    .container
+        .row.site-pages__wrapper
+            .col-12
+            h1.col-12.page-top__title.page-title.offset-xl-1  О компании
+                .site-pages__btn-dom
+            .slider.site-pages__slider.col-12
+                ul.site__list.col-12.d-flex.slider-wrapper
+                  li.action
+                    a.site__link(href="#about") О компании
+                  li
+                    a.site__hyperlink(href="./vacancies.html") Вакансии
+    +position-background("pattern-page", 'icon-background')
+  .description.section.description-gazification#about
+    .container
+      .row
+        .col-12.col-lg-12.col-xl-12
+          h2.description__text   Группа компаний «РОСГАЗ» оказывает услуги по продаже сжиженного углеводородного газа. Основное направление - реализация газа через автозаправочные станции. На каждой АГЗС есть возможность заправить свой автомобиль, оборудованный системой ГБО.
+          img.col-12.p-0(src="img/descr.jpg", alt="Фото человека с калькулятором")
+        .col-12.col-lg-12.d-flex.justify-content-end 
+          .description__content.col-12.col-xl-6.col-lg-12.p-0
+            p Также компания «РОСГАЗ» осуществляет доставку газа для предприятий и населения с помощью современных газовозов. Собственный автопарк, а так же обширная география работы позволяет существенно сократить время на доставку газа по территории Санкт-Петербурга, Ленинградской области, Республики Карелия и Мурманской области.
+            p Помимо реализации и доставки газа, группа компаний «РОСГАЗ» специализируется на установке современного газового баллонного оборудования (ГБО), а также на внедрении систем автономной газификации для частного сектора и предприятий.
+  section.trust
+          .container
+              .trust__top
+                  .row
+                      .col-12.d-flex.align-items-center.p-0.justify-content-cente
+                          .col-lg-12.col-xl-6.d-flex
+                              h2.section-title Почему нам доверяют?
+                  .row.trust__wrapper
+                    ul.d-flex.align-items-start.justify-content-cente.flex-column.flex-xl-row.flex-lg-column
+                        li.col-lg-12.col-xl-4.d-flex.flex-column
+                            +icon("wallet")
+                            h3 Цена
+                            p Мы не работаем с посредниками, а работаем "напрямую" с производителями, только это позволяет снижать рыночную цену до 25%
+                        li.col-lg-12.col-xl-4.d-flex.flex-column
+                            +icon("human")
+                            h3 Опыт
+                            p Мы работаем в газовой отрасли уже более 7 лет. Газ - это просто
+                        li.col-lg-12.col-xl-4.d-flex.flex-column
+                            +icon("safety")
+                            h3 Безопасно и надежно
+                            p У нас только новая и современная техника и оборудование. Весь транспорт и оборудование регулярно и своевременно проходят техническое обслуживание
+
+  include components/_map
+  include components/_request
+
+  block scripts
+

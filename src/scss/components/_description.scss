@@ -1,0 +1,227 @@
+// .description ====================================================================================================
+.description {
+  padding: 141px 0 149px;
+  background-color: $colorBgHeader;
+  color: $color-black;
+
+  h2{//добавил 14,10
+    &:not(.section-title){
+      @include fontCompressor(36px, 400, 42px, -0.28px);
+      text-indent: 60px;
+      @include media-breakpoint-down(lg) {
+        @include fontCompressor(24px, 500, 26px, -0.28px);
+        text-indent: 20px;
+      }	
+    }
+  }
+  p {
+    @include fontCompressor(16px, 400, 24px, 0.2px);
+    @include media-breakpoint-down(lg) {
+      @include fontCompressor(14px, 400, 20px, 0.28px);
+    }	
+    &:not(:last-child){
+        margin-bottom: 30px;
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 15px;
+        }	
+    }
+  }
+  img {
+    margin-bottom: 109px;
+    max-height: 500px;
+    @include media-breakpoint-down(xl) {
+      max-height: 355px;
+    }	
+    @include media-breakpoint-down(lg) {
+      max-height: 255px;
+    }	
+  }
+
+  ul {
+    @include list-reset;
+  }
+  @include list-card(10px,30px,30px,$color-green-700, 24px);
+
+  li {
+    @include fontCompressor(18px, 500, 28px, 0.2px);
+    @include media-breakpoint-down(lg) {
+      @include fontCompressor(14px, 500, 16px, 0.2px);
+    }
+}
+   //стили для description на страницы delivery=================================================
+  &.description-delivery {
+    padding-bottom: 135px;
+    @include media-breakpoint-down(lg) {
+      padding: 61px 0;
+    }	
+    h2 {
+      margin-bottom: 78px;
+      // @include fontCompressor(36px, 400, 42px, -0.288px);
+      @include media-breakpoint-down(xl) {
+        padding: 0;
+        margin-bottom: 14px;
+      }	
+    }
+    p {
+        &:not(:last-child){
+            margin-bottom: 83px;
+            @include media-breakpoint-down(lg) {
+              margin-bottom: 43px;
+            }	
+        }
+      }
+    ul {
+      margin-bottom: 60px;
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 40px;
+      }	
+    }
+    button {
+      width: max-content;
+    }
+    @include list-card(10px,30px,30px,$colorOrange, 24px);
+    img {
+      margin-bottom: 1px;
+      width: 100%;
+    }
+  }
+  
+ //стили для description на страницы gazification=================================================
+  @include media-breakpoint-down(lg) {
+    &.description-gazification {
+      padding: 60px 0;
+      img{
+        margin-bottom: 30px;
+      }
+    }
+  }	
+  
+
+  &.description-gazification h2 {
+    margin-bottom: 60px;
+    // text-indent: 60px;
+    //   @include media-breakpoint-down(lg) {
+    //     text-indent: 20px;
+    //   }
+    // @include fontCompressor(36px, 400, 42px, -0.28px);
+			@include media-breakpoint-down(lg) {
+        margin-bottom: 40px;
+			}	
+  }
+  //стили для description на страницы station=================================================
+  &.description-station{
+    img{
+        margin-bottom: 0;
+    }
+    .description-gbo__top {
+      padding-bottom: 0;
+    }
+    @include media-breakpoint-down(xl) {
+      img {
+        margin-bottom: 40px;
+        width: 100%;
+        max-height: 295px;
+      }
+
+      h3 {
+        padding-bottom: 40px;
+      }
+    }	
+    @include media-breakpoint-down(lg) {
+      img {
+        max-height: 253px;
+      }
+    }	
+  }
+  
+}
+  //стили для description на страницы gbo ========================================================
+.description-gbo {
+  padding: 140px 0 43px;//70
+  @include media-breakpoint-down(lg) {
+    padding: 51px 0 63px;
+  }
+  
+  &__item {
+    @include media-breakpoint-down(lg) {
+      padding-top: 33px;
+      .hero-slider {
+        padding: 0;
+      }
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    &--padding {
+      padding-bottom: 106px;
+      @include media-breakpoint-down(xl) {
+        padding-bottom: 40px;
+      }
+    }
+  }
+  // &__top {
+  //   position: relative;
+  // }
+  &__group {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+      @include media-breakpoint-down(lg) {
+        flex-direction: column-reverse;
+      }
+  }
+  &__right  {
+    gap: 20px;
+  }
+  &__instal {
+    gap: 47px;
+  }
+  &__top {
+    position: relative;
+    gap: 100px;
+      @include media-breakpoint-down(lg) {
+        gap: 40px;
+        padding-bottom: 40px;
+      }
+    @include section-border;
+  }
+  h3 {
+    @include media-breakpoint-down(lg) {
+      text-indent: 20px
+    }
+    @include fontCompressor(26px, 400, 32px, -0.2px);
+    @include media-breakpoint-down(lg) {
+      @include fontCompressor(24px, 500, 26px, -0.2px);
+    }
+  }
+  p {
+    @include fontCompressor(16px, 400, 22px, 0.2px);
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 10px;
+      @include fontCompressor(14px, 400, 20px, 0.2px);
+    }	
+  }
+  button {
+    @include media-breakpoint-down(lg) {
+      position: absolute;
+      bottom: 0;
+    }
+    @include btn-page(14px 27px, 50px, $color-green-700);
+    @include fontCompressor(14px, 600, 20px, 0.2px);
+    color: $color-light;
+  }
+  img {
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 24px;
+    }	
+
+  }
+  &__block-btn {
+    &.block-btn-installation {
+      bottom: 21px;
+    }
+    @include block-btn(".gbo-dots-inner", ".gbo-btn-dom", 57px, 0px);
+  }
+  
+}

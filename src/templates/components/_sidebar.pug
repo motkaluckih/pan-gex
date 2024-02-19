@@ -1,0 +1,38 @@
+.sidebar.sidebar-close#sidebar
+    .container-fluid
+        .row.sidebar-wrap
+            .col-12.d-flex.p-0 
+                a.header-mobile__btn.green(href="tel:89210113111")
+                    +icon("phone")
+                    | 8 (921) 011-31-11
+                button.header-mobile__btn.header-mobile__btn-color(data-fancybox='' data-animation-duration='50' data-src='#fastOrder' href='javascript:;')
+                    +icon("headphone")
+                    | Заказать звонок
+            .col-12.sidebar-top__close.d-flex.justify-content-between
+                a(href="#")
+                    img.logo-sidebar(src="img/logo.svg", alt="PANEX")
+                a#closeSidebar(href="javascript:void(0);")
+                    +icon('close')
+        .row 
+            #mobileNav
+                ul.menu
+                    li.menu__item.menu__item_active
+                        a(href='index.html') Главная 
+                    li.menu__item
+                        a(href='') Газификация
+                        +icon('menu-arrow')
+                    li.menu__item
+                        a(href='') Доставка газа
+                        +icon('menu-arrow')
+                    li.menu__item
+                        a(href='about.html') Услуги
+                        +icon('menu-arrow')
+                    li.menu__item
+                        a(href='about.html') Блог
+                        +icon('menu-arrow')
+                    li.menu__item
+                        a(href='about.html') О нас
+                        +icon('menu-arrow')
+                    li.menu__item
+                        a(href='contacts.html') Контакты
+                        +icon('menu-arrow')

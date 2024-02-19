@@ -1,0 +1,347 @@
+@use "sass:math";
+
+// * ====================================================================================================
+// * FONT-FACE
+// * ====================================================================================================
+
+@mixin font-face($font-name, $font-src, $font-style, $font-weight) {
+  @font-face {
+    font-weight: $font-weight;
+    font-family: "#{$font-name}";
+    font-style: $font-style;
+    src: url("../fonts/#{$font-src}.woff2") format("woff2"),
+      url("../fonts/#{$font-src}.woff") format("woff");
+    font-display: swap;
+  }
+}
+
+// * ====================================================================================================
+// * MEDIA QUERIES
+// * ====================================================================================================
+
+@mixin media($width, $type: max) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+
+    @if $type == max {
+      $width: $width - 0.02px;
+    }
+
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+// * ====================================================================================================
+// * CENTER BLOCK
+// * ====================================================================================================
+
+@mixin margin-auto() {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin absolute-center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin absolute-center-x() {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin absolute-center-y() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// * ====================================================================================================
+// * PIXELS TO DIFFERENT UNITS
+// * ====================================================================================================
+
+// Удаление единицы измерения у числа (16px => 16) ====================================================================================================
+@function strip-units($number) {
+  @return math.div($number, ($number * 0 + 1));
+}
+
+// Конвератция px в rem ====================================================================================================
+@function px-to-rem($px) {
+  $result: math.div(strip-units($px), 16) + rem;
+  @return $result;
+}
+
+// Конвертация px в % ====================================================================================================
+@function px-to-prc($pxOne, $pxTwo) {
+  $result: math.div(strip-units($pxOne), strip-units($pxTwo)) * 100%;
+  @return $result;
+}
+
+@function get-size($pxMin, $pxMax) {
+  $addSize: strip-units($pxMax) - strip-units($pxMin);
+
+  @return calc(
+    #{$pxMin} + #{$addSize} *
+      (
+        (100vw - #{$min-width-container}) /
+          (
+            #{strip-units($max-width-container)} - #{strip-units(
+                $min-width-container
+              )}
+          )
+      )
+  );
+}
+
+// Адаптивное значение для свойства между максимальной шириной контейнера и минимальной
+// Передается в миксин (свойство, минимальное значение и максимальное значение)
+@mixin adaptive-value($property, $pxMin, $pxMax) {
+  #{$property}: $pxMax;
+
+  @media (max-width: #{$max-width-container}) {
+    #{$property}: get-size($pxMin, $pxMax);
+  }
+
+  @media (max-width: #{$min-width-container}) {
+    #{$property}: $pxMin;
+  }
+}
+// @mixin btn-global(){
+
+// }
+//Создает шрифты
+@mixin fontCompressor($size, $weight, $line, $spacing) {
+  font-size: #{$size};
+  font-weight: #{$weight};
+  line-height: #{$line};
+  letter-spacing: #{$spacing};
+}
+
+//Работает с состоянием кнопок disabled
+@mixin slider-owl {
+  .owl-next.disabled rect,
+  .owl-prev.disabled rect {
+    opacity: 0.2;
+  }
+  .owl-next.disabled path,
+  .owl-prev.disabled path {
+    stroke: black;
+  }
+}
+
+//Делаем бордюр у секции
+@mixin section-border{
+  padding-top: 20px;
+  border-top: $borderGray;
+}
+
+//Преобразуем svg sprite в цвет
+@mixin svg-converter($color) {
+  fill: transparent;
+  stroke: $color;
+}
+
+@mixin list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+//Часто повторяющаяся кнопка на страницах
+@mixin btn-page($padding, $radius, $bg){
+  padding: #{$padding};
+  border-radius: #{$radius};
+  background-color: #{$bg};
+}
+
+//Для работы с одинаковыми карточками, где предусмотрен с лева какой-то элемент 
+@mixin list-card($gap, $pb, $pt, $color, $size){
+  li {
+    display: flex;
+    align-items: center;
+    gap: #{$gap};
+    &:not(:last-child) {
+      padding-bottom: #{$pb};
+      border-bottom: $borderGray;
+    }
+    &:not(:first-child){
+      padding-top: #{$pt};
+    }
+  }
+
+  svg {
+    @include svg-converter(#{$color});
+  }
+
+  .icon {
+    width: #{$size};;
+    height: #{$size};;
+  }
+  a {
+    display: block;
+    color: #{$color};
+  }
+}
+
+@mixin block-btn($dots, $btn, $bottom, $left){
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  @include media-breakpoint-down(lg) {
+    bottom: #{$bottom};
+    left: #{$left};
+    justify-content: center;
+  }
+  #{$dots} {
+    display: none;
+      @include media-breakpoint-down(xl) {
+          display: flex;
+      }
+  }
+  #{$btn}{
+      @include media-breakpoint-down(xl) {
+      display: none;
+    }
+  }
+
+}
+
+@mixin range-formater($color-bg){
+  input[type=range] {
+		width: 100%;
+		box-sizing: border-box;
+		-webkit-appearance: none;
+		background: transparent;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+
+		@-moz-document url-prefix() {
+			bottom: -10px;
+		}
+
+		&::-webkit-slider-thumb {
+			-webkit-appearance: none;
+		}
+
+		&:focus {
+			outline: none;
+		}
+		
+		&::-ms-track {
+			width: 100%;
+			cursor: pointer;
+			background: transparent;
+			border-color: transparent;
+			color: transparent;
+		}
+		
+		&::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			margin-top: -8px;
+			border: 3px solid $color-bg;
+			
+			height: 21px;
+			width: 21px;
+			background: $color-light;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+
+		&::-moz-range-thumb {
+			//margin-top: -8px;
+			border: 3px solid $color-bg;
+			height: 14px;
+			width: 14px;
+			background: $color-light;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+
+		&::-ms-thumb {
+			height: 21px;
+			width: 21px;
+			background: $color-light;
+			cursor: pointer;
+		}
+
+		&::-webkit-slider-runnable-track {
+			width: 100%;
+			height: 4px;
+			cursor: pointer;
+			
+			background: $color-bg;
+			border-bottom-left-radius: 8px;
+			border-bottom-right-radius: 8px;
+		}
+
+		&:focus::-webkit-slider-runnable-track {
+			background: $color-bg;
+		}
+
+		&::-moz-range-track {
+			width: 100%;
+			height: 4px;
+			cursor: pointer;
+			background: $color-bg;
+			border-bottom-left-radius: 8px;
+			border-bottom-right-radius: 8px;
+		}
+
+		&::-ms-track {
+			
+			width: 100%;
+			height: 4px;
+			cursor: pointer;
+			background: $color-bg;
+			border-bottom-left-radius: 8px;
+			border-bottom-right-radius: 8px;
+		}
+		&::-ms-fill-lower {
+			background: $color-bg;
+			border-radius: 2.6px;
+		}
+		&:focus::-ms-fill-lower {
+			background: $color-bg;
+		}
+		&::-ms-fill-upper {
+			background: $color-bg;
+			border-radius: 2.6px;
+		}
+		&:focus::-ms-fill-upper {
+			background: $color-bg;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

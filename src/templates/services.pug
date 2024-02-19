@@ -1,0 +1,104 @@
+extends layouts/_default
+
+block vars
+  - let pageTitle = "Наши услуги";
+  - let currentPage = "services";
+
+block content
+
+  .site-pages
+    .container
+        .row.site-pages__wrapper
+            .col-12
+            h1.col-12.page-top__title.page-title.offset-xl-1  Наши услуги
+                .site-pages__btn-dom
+            .slider.site-pages__slider.col-12
+                ul.site__list.col-12.d-flex.slider-wrapper
+                    li.action
+                      a.site__link(href="#services") услуги
+                    li
+                      a.site__link(href="#gbo") гбо
+                    li
+                      a.site__link(href="#gasification") Автономная газификация
+                    li
+                      a.site__link(href="#installation") Доставка газа
+    +position-background("pattern-page", 'icon-background')
+
+  .services
+    .container
+      .row
+        .col-12
+          .services-group.services__group
+            h3.section-title#services Услуги
+            ul.services-group__list
+              li
+                a(href="#")
+                  span Сеть АГЗС
+                  span.services__group-icon
+                    +icon("arrow-line")
+              li
+                a(href="#")
+                  span Корпоративным клиентам
+                  span.services__group-icon
+                    +icon("arrow-line")
+              li
+                a(href="#")
+                  span Спецпрограмма «Такси»
+                  span.services__group-icon
+                    +icon("arrow-line")
+          .services-group.services__group
+            h3.section-title#gbo ГБО
+            ul.services-group__list
+              li
+                a(href="#")
+                  span Перевод авто на газ
+                  span.services__group-icon
+                    +icon("arrow-line")
+              li
+                a(href="#")
+                  span Обслуживание и ремонт ГБО
+                  span.services__group-icon
+                    +icon("arrow-line")
+              li
+                a(href="#")
+                  span Регистрация ГБО
+                  span.services__group-icon
+                    +icon("arrow-line")
+              li
+                a(href="#")
+                  span Демонтаж ГБО
+                  span.services__group-icon
+                    +icon("arrow-line")
+              li
+                a(href="#")
+                  span Калькулятор окупаемости ГБО
+                  span.services__group-icon
+                    +icon("arrow-line")
+          .services-group.services__group
+            h3.section-title#gasification Автономная газификация
+            ul.services-group__list
+              li
+                a(href="#")
+                  span Автономная газификация
+                  span.services__group-icon
+                    +icon("arrow-line")
+              li
+                a(href="#")
+                  span Калькулятор расхода газа
+                  span.services__group-icon
+                    +icon("arrow-line")
+          .services-group.services__group
+            h3.section-title#installation Доставка газа
+            ul.services-group__list
+              li
+                a(href="#")
+                  span Доставка газа
+                  span.services__group-icon
+                    +icon("arrow-line")
+              li
+                a(href="#")
+                  span Доставка баллонов
+                  span.services__group-icon
+                    +icon("arrow-line")
+
+  include components/_request

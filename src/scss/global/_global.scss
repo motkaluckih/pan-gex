@@ -1,0 +1,568 @@
+// * ====================================================================================================
+// * GLOBAL STYLES
+// * ====================================================================================================
+
+html {
+	height: 100%;
+}
+.container {
+	@include media-breakpoint-down(xl) {
+		padding: 0 20px;
+	}
+  }
+
+// .icon ====================================================================================================
+
+.iconBackground {
+    position: absolute;
+    top: 0;
+	right: -32%;
+    bottom: 0;
+    width: 100%;
+    min-height: 100%;
+    fill: currentColor;
+	@include media-breakpoint-down(md) {
+		width: 100%;
+		height: 100%;
+		right: -18%;
+	}
+}
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+}
+
+// .page ====================================================================================================
+
+*:focus {
+	outline: none;
+}
+
+.page {
+	height: 100%;
+	min-height: 100%;
+
+	@include body;
+
+	// .page__wrapper
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		min-height: 100%;
+		overflow: hidden;
+	}
+
+	// .page--lock
+	&--lock {
+		overflow: hidden;
+	}
+}
+
+// .main ====================================================================================================
+
+.main {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+// .section ====================================================================================================
+.section {
+	padding: 140px 0;
+	
+	@include media-breakpoint-down(xl) {
+		padding: 100px 0;
+	}
+
+	@include media-breakpoint-down(lg) {
+		padding: 80px 0;
+	}
+
+	@include media-breakpoint-down(md) {
+		padding: 60px 0;
+	}
+	&__left {
+		@include media-breakpoint-down(lg) {
+			position: absolute;
+			// padding-right: 0;
+			padding: 0;//0 15px
+			width: 100%;
+			bottom: 0;
+			left: 0;
+		}
+		
+	}
+	a {
+		display: inline-block;
+		padding: 5px 14px;
+		min-width: 151px;
+		min-height: 30px;
+		border-radius: 50px;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 20px;
+		border: $borderGrayOpacity;	
+		text-align: center;
+		@include media-breakpoint-down(lg) {
+			font-size: 14px;
+			line-height: 20px; 
+			letter-spacing: 0.2px;
+		}
+	}
+	// .section__top
+	&__top {
+		margin-bottom: 100px;
+
+		@include media-breakpoint-down(xl) {
+			margin-bottom: 80px;
+		}
+
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 60px;
+		}
+
+		@include media-breakpoint-down(md) {
+			margin-bottom: 40px;
+		}
+	}
+
+
+	// .section__subtext
+	&__subtext {
+		margin-top: 19px;
+
+		@include media-breakpoint-down(lg) {
+			margin-top: 17px;
+		}
+
+		@include media-breakpoint-down(md) {
+			margin-top: 14px;
+		}
+	}
+
+	// .section__link
+	&__link {
+		margin-left: 16px;
+
+		@include media-breakpoint-down(md) {
+			margin-left: 13px;
+		}
+	}
+
+	// .section--large
+	&--large {
+		padding: 157px 0;
+
+		@include media-breakpoint-down(xl) {
+			padding: 100px 0;
+		}
+
+		@include media-breakpoint-down(lg) {
+			padding: 80px 0;
+		}
+
+		@include media-breakpoint-down(md) {
+			padding: 60px 0;
+		}
+	}
+
+	&__bg-blue {
+		background-color: $color-second-default;
+	}
+
+	&__bg-blue-dark {
+		background-color: $color-second-dark;
+	}
+
+	&__bg-primary-dark {
+		background-color: $color-primary-dark;
+	}
+
+	&__bg-primary-light {
+		background-color: $color-primary-light;
+	}
+
+	&__bg-white {
+		background-color: $color-second-light;
+	}
+}
+
+// .section-title ====================================================================================================
+.section-title {
+	display: inline-block;
+
+	@include title-2;
+
+	&__color-light {
+		color: $color-light;
+	}
+
+	&__color-dark {
+		color: $color-dark;
+	}
+}
+
+// .section-subtext ====================================================================================================
+.section-subtext {
+	display: block;
+	color: $color-dark-045;
+	font-size: 21px;
+	line-height: 1.71;
+
+	@include media-breakpoint-down(lg) {
+		font-size: 19px;
+		line-height: 1.6;
+	}
+
+	@include media-breakpoint-down(md) {
+		font-size: 17px;
+		line-height: 1.41;
+	}
+
+	&__color-light {
+		color: $color-light-065;
+	}
+
+	&__color-dark {
+		color: $color-dark-045;
+	}
+
+}
+
+// .section-link ====================================================================================================
+.section-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 48px;
+	padding: 6px 16px;
+	font-weight: 500;
+	text-decoration: none;
+	background: $color-light;
+	border-radius: 100px;
+
+	@include media-breakpoint-down(lg) {
+		min-height: 40px;
+		padding: 4px 12px;
+	}
+
+	@include media-breakpoint-down(md) {
+		min-height: 30px;
+		padding: 3px 8px;
+	}
+
+	.icon {
+		width: 24px;
+		height: 24px;
+		margin-left: 8px;
+
+		@include media-breakpoint-down(lg) {
+			width: 20px;
+			height: 20px;
+			margin-left: 6px;
+		}
+		@include media-breakpoint-down(md) {
+			width: 16px;
+			height: 16px;
+			margin-left: 4px;
+		}
+	}
+}
+
+
+//site-pages======================================================================================================
+	.site-pages {
+		position: relative;
+		background-color: #E7EBF0;
+		&__wrapper {
+			padding: 100px 0 20px;
+			@include media-breakpoint-down(lg) {
+				padding: 108px 0 14px;
+			}	
+		}
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			// gap: 20px;
+			z-index: 8;
+		}
+		li {
+			min-width: max-content;
+			// @include media-breakpoint-down(lg) {
+				
+			// }	
+			@include fontCompressor(13px, 600, 20px, 0.6px);
+			color: $color-black;
+			text-transform: uppercase;
+			@include media-breakpoint-down(lg) {
+				@include fontCompressor(12px, 600, 14px, 0.6px);
+			}	
+
+			&.action {
+				color: $color-gray-400;
+			}
+			a {
+				order: 1;
+				text-decoration: none;
+			}
+		}
+
+		.owl-next {
+			position: absolute;
+			right: 0;
+			bottom: -15px;
+		}
+		&__slider {
+			order: 2;
+		}
+		.iconBackground {
+			order: 3;
+		}
+		&__slider .owl-prev {
+			position: absolute;
+			left: 0;
+			bottom: -15px;
+		}
+
+		.owl-next.disabled,
+		.owl-prev.disabled  {
+		opacity: 0;
+		}
+
+	}
+	.site-pages-delivery{
+		h1 {
+			margin-bottom: 0;
+			text-indent: 72px;
+			@include media-breakpoint-down(lg) {
+				padding-left: 20px;
+				text-indent: 28px;
+			}
+		}
+		.site-pages__wrapper {
+			padding-bottom: 186px;
+			@include media-breakpoint-down(lg) {
+				padding-bottom: 71px;
+			}
+		}
+	}
+// .page-top ====================================================================================================
+.page-top {
+	position: relative;
+	background-color: $colorBgGray;
+	&__main {
+		padding: 140px 0 80px;
+		@include media-breakpoint-down(sm) {
+			padding: 133px 0 63px 22px;
+		}
+		.row {
+			position: relative;
+		}
+		padding: 228px 0 149px;
+		@include media-breakpoint-down(xl) {
+			padding: 120px 0;
+		}
+	
+		// @include media-breakpoint-down(lg) {
+		// 	padding: 100px 0;
+		// }
+		.iconBackground {
+			padding-top: 60px;
+			@include media-breakpoint-down(sm) {
+				padding-top: 0px;
+			}
+		}
+		.page-top__title {
+			margin-bottom: 59px;
+			padding-left: 60px;
+			@include media-breakpoint-down(sm) {
+			  	padding-left: 0px;
+			}
+			@include media-breakpoint-down(sm) {
+				margin-bottom: 22px;
+				font-size: 36px;
+				font-weight: 500;
+				line-height: 1;
+			}
+		}
+		button {
+			position: absolute;
+			width: auto;
+			height: auto;
+			left: 0;
+			// @include media-breakpoint-down(lg) {
+			// 	left: -17%;
+			// }
+			@include media-breakpoint-down(sm) {
+				left: -4%;
+				svg {
+					width: 37px;
+					height: 37px;
+				}
+			}
+		}
+	}
+	@include media-breakpoint-down(md) {
+		padding: 60px 0;
+	}
+
+	// @include media-breakpoint-down(md) {
+	// 	padding: 40px 0;
+	// }
+
+	// .page-top__title
+
+
+	&__title {
+		margin-bottom: 12px;
+
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 0;
+		}
+	}
+}
+
+// .page-title ========================================================================================================
+.page-title-main {
+	@include title-1;
+}
+
+.page-title {
+	margin-bottom: 132px;
+	@include title-6;
+	text-transform: uppercase;
+	@include media-breakpoint-down(lg) {
+		margin-bottom: 77px;
+		font-size: 34px;
+		text-indent: 25px;
+	}	
+}
+
+//Стили для секции заголовка на страниц сеть заправочных станций
+.site-pages-station .page-title{
+	margin-bottom: 0;
+}
+
+.site-pages-station .site-pages__wrapper {
+    padding: 100px 0 174px;
+	@include media-breakpoint-down(lg) {
+		padding: 65px 0 57px 15px;
+	}
+}
+
+video {
+	max-width: 100%;
+	height: auto;
+}
+
+.base-image {
+	max-width: 100%;
+	height: auto;
+	border-radius: 14px;
+}
+
+.table-wrapper {
+	overflow-x: auto;
+}
+
+.table-location {
+    padding: 35px 0 132px;
+	@include media-breakpoint-down(lg) {
+		padding: 0px 0 47px;
+	}
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+
+	thead, tr {
+		&:not(:last-child){
+			border-bottom: $borderDark;
+		}
+	}
+	tr td:last-child,
+	tr th:last-child {
+		text-align: right;
+	}
+
+	thead, tr {
+		padding: .35em;
+		
+		th, td {
+			padding: 18px;
+			white-space: nowrap;
+			color: $color-dark;
+
+			.icon {
+				fill: none;
+				width: 24px;
+				height: 24px;
+			}
+
+			svg {
+				@include svg-converter($color-blue-400);
+			}
+		}
+
+		th {
+			@include fontCompressor(13px, 700, 20px, 0.2px);
+			@include media-breakpoint-down(lg) {
+				@include fontCompressor(12px, 700, 14px, 0.2px);
+			}	
+			text-transform: uppercase;
+			text-align: left;
+		}
+
+		td {
+			@include fontCompressor(16px, 500, 20px, 0.2px);
+			@include media-breakpoint-down(lg) {
+				@include fontCompressor(14px, 500, 20px, 0.2px);
+			}	
+		}
+	}
+
+}
+
+.mt-80 {
+	margin-top: 80px;
+
+	@include media-breakpoint-down(lg) {
+		margin-top: 60px;
+	}
+
+	@include media-breakpoint-down(md) {
+		margin-top: 40px;
+	}
+}
+
+.mb-80 {
+	margin-bottom: 80px;
+
+	@include media-breakpoint-down(lg) {
+		margin-bottom: 60px;
+	}
+
+	@include media-breakpoint-down(md) {
+		margin-bottom: 40px;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+.hero-slider {
+	padding: 0;
+}
+
+.d-flex-gap {
+	display: flex;
+	gap: 10px;
+}

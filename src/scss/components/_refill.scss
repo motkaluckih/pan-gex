@@ -1,0 +1,75 @@
+.refill {
+    padding-top: 146px;
+    padding-bottom: 140px;
+    color: $color-black;
+
+    ul {
+        @include list-reset;
+        gap: 0 58px;
+    }
+
+    @include media-breakpoint-down(lg) {
+        padding-top: 40px;
+        padding-bottom: 102px;
+    }
+    &__wrapper {
+        @include media-breakpoint-down(xl) {
+            position: relative;
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__top {
+        @include section-border;
+    }
+    button {
+        width: max-content;
+        @include media-breakpoint-down(xl) {
+            position: absolute;
+            bottom: -60px;
+        }
+    }
+    li {
+        padding: 30px 0px;
+        gap: 14px;
+        border-bottom: $borderGray;
+        @include media-breakpoint-down(xl) {
+            padding: 16px 0;
+            width: 100%;
+        }
+        @include media-breakpoint-down(xl) {
+            height: auto;
+        }
+        .icon {
+            width: 28px;
+            height: 28px;
+            @include media-breakpoint-down(xl) {
+                width: 23px;
+                height: 23px;
+            }
+        }
+    }
+    svg {
+        @include svg-converter($colorOrange);
+    }
+    h2 {
+        margin-bottom: 66px;
+        @include fontCompressor(36px, 400, 42px, -0.288px);
+        @include media-breakpoint-down(xl) {
+            margin-bottom: 16px;
+        }
+        @include media-breakpoint-down(lg) {
+            @include fontCompressor(24px, 500, 26px, 0.2px);
+        }
+    }
+    p {
+        margin-bottom: 60px;
+        @include fontCompressor(16px, 400, 22px, 0.2px);
+        @include media-breakpoint-down(xl) {
+            margin-bottom: 16px;
+        }
+        @include media-breakpoint-down(lg) {
+            @include fontCompressor(14px, 400, 20px, 0.2px);
+        }
+    }
+}

@@ -1,0 +1,55 @@
+// .breadcrumbs ====================================================================================================
+.breadcrumbs {
+  // .breadcrumbs__list
+  &__list {
+      padding: 6px 0;
+      list-style: none;
+      li {
+        display: inline-flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 2.25;
+
+        // &:not(:last-child) {
+        //   margin-right: 8px;
+
+        //   &::after {
+        //     display: block;
+        //     width: 24px;
+        //     height: 24px;
+        //     margin-left: 8px;
+        //     background-image: url("data:image/svg+xml,%3Csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.172 12.9476L9.34302 10.1196L10.757 8.70459L15 12.9476L10.757 17.1906L9.34302 15.7756L12.172 12.9476Z' fill='%232E3237'/%3E%3C/svg%3E%0A");
+        //     content: "";
+        //   }
+        // }
+
+        a {
+          text-decoration: none;
+        }
+
+        span {
+          color: $color-black;
+        }
+      }
+    &-main {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      padding-left: 145px;
+      @include media-breakpoint-down(md) {
+        padding-left: 40px;
+			}
+      li {
+        max-width: 210px;
+        font-weight: 400;
+        line-height: 22px;
+        @include media-breakpoint-down(md) {
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+}

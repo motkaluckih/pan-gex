@@ -1,0 +1,247 @@
+// .advantages ====================================================================================================
+.advantages {
+  @include media-breakpoint-down(md) {
+    margin-bottom: -40px;
+    padding: 0;
+
+    & + * {
+      padding-top: calc(40px + 60px);
+    }
+  }
+}
+
+// .advantages-slider ====================================================================================================
+.advantages-slider {
+  .owl-stage-outer {
+    overflow: hidden;
+
+    @include media-breakpoint-down(md) {
+      overflow: visible;
+    }
+  }
+
+  .slider-dots {
+    bottom: 65px;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+
+    .container {
+      padding: 0 76px;
+
+      @include media-breakpoint-down(lg) {
+        padding: 0 50px;
+      }
+    }
+
+    &__inner {
+      justify-content: flex-end;
+    }
+  }
+
+  .owl-item.active {
+    position: relative;
+    z-index: 10;
+  }
+
+  .slider-nav {
+    top: auto;
+    bottom: 48px;
+    z-index: 10;
+
+    @include media-breakpoint-down(md) {
+      top: 176px;
+      bottom: auto;
+      transform: unset;
+    }
+
+    @include media-breakpoint-down(sm) {
+      top: 137px;
+    }
+
+    .container {
+      max-width: 1206px;
+      padding: 0 76px;
+
+      @include media-breakpoint-down(xxl) {
+        max-width: 1140px;
+      }
+
+      @include media-breakpoint-down(xl) {
+        max-width: 960px;
+      }
+
+      @include media-breakpoint-down(lg) {
+        max-width: 720px;
+        padding: 0 50px;
+      }
+
+      @include media-breakpoint-down(md) {
+        max-width: 540px;
+        padding: 0 15px;
+      }
+    }
+
+    &__inner {
+      justify-content: flex-start;
+    }
+
+    .owl-next,
+    .owl-prev {
+      top: auto;
+      bottom: 0;
+      transform: unset;
+
+      @include media-breakpoint-down(md) {
+        top: 50%;
+        bottom: auto;
+        transform: translateY(-50%);
+      }
+    }
+
+    .owl-next {
+      right: auto;
+      left: 62px;
+
+      @include media-breakpoint-down(md) {
+        right: 0;
+        left: auto;
+      }
+    }
+  }
+}
+
+// .advantages-slide ====================================================================================================
+.advantages-slide {
+  &__box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 672px;
+    padding: 76px;
+
+    @include media-breakpoint-down(xl) {
+      min-height: 600px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      min-height: 500px;
+      padding: 50px;
+    }
+
+    @include media-breakpoint-down(md) {
+      min-height: unset;
+      padding: 0;
+    }
+  }
+
+  // .advantages-slide__img
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: $radius;
+
+    @include media-breakpoint-down(md) {
+      position: relative;
+      height: 350px;
+      overflow: visible;
+      border-radius: 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+      height: 270px;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+
+      @include media-breakpoint-down(md) {
+        left: calc((-1) * (100vw - 100%) / 2);
+        width: 100vw;
+      }
+    }
+  }
+
+  // .advantages-slide__content
+  &__content {
+    position: relative;
+    z-index: 2;
+    width: 46px;
+    height: 46px;
+    margin-bottom: 154px;
+
+    @include media-breakpoint-down(md) {
+      width: unset;
+      height: unset;
+      margin-top: -35px;
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      .advantages-slide__plus {
+        transform: rotate(225deg);
+      }
+
+      .advantages-slide__text {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  // .advantages-slide__plus
+  &__plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    color: $color-light;
+    background-color: $color-second-default;
+    border-radius: 50%;
+    transition: transform $transition;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+
+    .icon {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  // .advantages-slide__text
+  &__text {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    min-width: 342px;
+    padding: 40px;
+    background-color: $color-light;
+    border: 1px solid $color-gray-300;
+    border-radius: $radius;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity $transition, visibility $transition;
+
+    @include media-breakpoint-down(md) {
+      position: static;
+      padding: 25px;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

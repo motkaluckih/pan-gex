@@ -1,0 +1,162 @@
+// .contacts ====================================================================================================
+.contacts {
+  padding: 144px 0;
+  background-color: $colorBgHeader;
+
+  @include fontCompressor(16px, 400, 24px, 0.2px);
+  @include media-breakpoint-down(lg) {
+    padding: 62px 0;
+    @include fontCompressor(14px, 400, 20px, 0.28px);
+  }	
+
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 0;
+  }
+
+  // .contacts__title
+  h2 {
+    padding-left: 63px;
+    margin-bottom: 96px;
+      @include fontCompressor(36px, 400, 42px, -1.288px);
+      text-transform: unset;
+        @include media-breakpoint-down(lg) {
+          padding-left: 15px;
+          @include fontCompressor(24px, 500, 26px, 0.28px);
+        }	
+    @include media-breakpoint-down(md) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__items {
+    margin-bottom: 102px;
+    padding: 70px 0;
+    border-top: $borderGray;
+    border-bottom: $borderGray;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 40px;
+      padding: 32px 0;
+    }
+
+    [class*="col-"] {
+      @include media-breakpoint-down(lg) {
+        &:not(:last-child) {
+          & > * {
+            display: inline-block;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+
+  }
+
+
+  // .contacts__list
+  &__list {
+    @include media-breakpoint-down(lg) {
+      padding-bottom: 60px;
+    }
+    .contacts-item {
+      background-color: transparent;
+      border-radius: 0;
+      border: $borderGray;
+        &:not(:last-child) {
+          border-right: $borderGray; 
+        }
+     
+        @include media-breakpoint-down(xl) {
+          border-right: $borderGray;
+        }	
+    }
+  }
+
+  [href*="mailto"] {
+    color:$colorOrange;
+    @include fontCompressor(16px, 400, 24px, 0.2px);
+    @include media-breakpoint-down(lg) {
+      @include fontCompressor(14px, 400, 20px, 0.2px);
+    }	
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  &__map {
+    margin-top: 60px;
+  }
+}
+
+// .contacts-item ====================================================================================================
+.contacts-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 70px 50px;
+  background-color: $color-light;
+  border-radius: $radius;
+
+  @include media-breakpoint-down(lg) {
+    padding: 20px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 18px;
+  }
+
+  // .contacts-item__title
+  &__title {
+    @include fontCompressor(13px, 700, 20px, 0.6px);
+    text-transform: uppercase;
+    color: $color-gray-700;
+    margin-bottom: 24px;
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 16px;
+      @include fontCompressor(12px, 700, 14px, 0.6px);
+    }
+  }
+
+  // .contacts-item__phone
+  &__phone {
+    margin-bottom: 8px;
+    @include fontCompressor(24px, 500, 28px, -0.198px);
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 4px;
+      @include fontCompressor(18px, 500, 22px, -0.144px);
+    }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 4px;
+    }
+  }
+}
+
+// .contacts-map ====================================================================================================
+.contacts-map {
+  position: relative;
+  padding-bottom: 56%;
+
+  // height: 660px;
+  overflow: hidden;
+  border-radius: $radius;
+
+  @include media-breakpoint-down(md) {
+    height: 400px;
+    padding-bottom: 0;
+    overflow: visible;
+  }
+
+  // .contacts-map__iframe
+  &__iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    @include media-breakpoint-down(md) {
+      left: calc((-1) * (100vw - 100%) / 2);
+      width: 100vw;
+    }
+  }
+}

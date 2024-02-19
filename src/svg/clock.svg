@@ -1,0 +1,12 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M34 35L42 27" stroke="#2E3237" stroke-width="2" stroke-miterlimit="16"/>
+    <circle cx="32" cy="37" r="3" stroke="#2E3237" stroke-width="2"/>
+    <path d="M49.4825 50.3571C45.4621 55.6112 39.1268 59 32 59C19.8497 59 10 49.1503 10 37C10 24.8497 19.8497 15 32 15C44.1503 15 54 24.8497 54 37C54 38.1074 53.9182 39.1958 53.7602 40.2593M51.0568 48C51.3525 47.4888 51.6282 46.9647 51.8829 46.4286" stroke="#2E3237" stroke-width="2"/>
+    <path d="M30 15L30 9" stroke="#2E3237" stroke-width="2" stroke-miterlimit="16" stroke-linecap="square"/>
+    <path d="M34 15L34 9" stroke="#2E3237" stroke-width="2" stroke-miterlimit="16" stroke-linecap="square"/>
+    <rect x="28" y="5" width="8" height="4" stroke="#2E3237" stroke-width="2"/>
+    <path d="M46.5 20.3995L49.6569 17.2426C50.4379 16.4616 50.4379 15.1953 49.6569 14.4142V14.4142C48.8759 13.6332 47.6095 13.6332 46.8285 14.4142L43 18.2427" stroke="#2E3237" stroke-width="2"/>
+    <line x1="4" y1="53" x2="22" y2="53" stroke="#2E3237" stroke-width="2"/>
+    <line x1="8" y1="47" x2="24" y2="47" stroke="#2E3237" stroke-width="2"/>
+    <line x1="6" y1="41" x2="26" y2="41" stroke="#2E3237" stroke-width="2"/>
+</svg>

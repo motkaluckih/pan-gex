@@ -1,0 +1,53 @@
+// .socials ====================================================================================================
+.socials {
+  // .socials__list
+  &__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 16px;
+
+        @include media-breakpoint-down(md) {
+          margin-right: 13px;
+        }
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border: 1px solid $color-dark-023;
+      border-radius: 50%;
+
+      @include media-breakpoint-down(lg) {
+        width: 45px;
+        height: 45px;
+      }
+
+      @include media-breakpoint-down(md) {
+        width: 40px;
+        height: 40px;
+      }
+
+      .icon {
+        width: 35px;
+        height: 35px;
+
+        @include media-breakpoint-down(lg) {
+          width: 32px;
+          height: 32px;
+        }
+        @include media-breakpoint-down(md) {
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,238 @@
+// .button ====================================================================================================
+.button {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 161px;
+	min-height: 40px;
+	padding: 10px;
+	color: $color-light;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 20px;
+	letter-spacing: 0.0015em;
+	text-align: center;
+	text-decoration: none;
+	background-color: $color-second-default;
+	border-radius: 100px;
+	cursor: pointer;
+	transition: background-color $transition;
+
+	@include media-breakpoint-down(md) {
+		min-width: 140px;
+		min-height: 48px;
+		font-size: 15px;
+		line-height: 1.07;
+	}
+
+	&:hover,
+	&:active {
+		background-color: $color-second-dark;
+	}
+
+	&:focus-visible {
+		background-color: $color-second-default;
+
+		&::before {
+			opacity: 1;
+		}
+	}
+
+	&:disabled {
+		opacity: 0.45;
+	}
+
+	&::before {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: -1;
+		width: calc(100% + 12px);
+		height: calc(100% + 12px);
+		border: 1px solid transparent;
+		border-radius: 50px;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+		transition: opacity $transition;
+		content: "";
+	}
+
+	// .button--outline
+	&--outline {
+		color: $color-second-default;
+		background-color: transparent !important;
+		border: 1px solid $color-second-default;
+		transition: border-color $transition, color $transition;
+
+		&:hover,
+		&:active {
+			color: $color-second-dark;
+			border-color: $color-second-dark;
+		}
+
+		&:focus-visible {
+			background-color: $color-second-default;
+		}
+	}
+
+	// .button--large
+	&--large {
+		min-width: 189px;
+		min-height: 48px;
+		@include fontCompressor(14px, 600, 0px, 0.2px);
+
+		@include media-breakpoint-down(md) {
+			min-width: 172px;
+			min-height: 41px;
+			@include fontCompressor(13px, 600, 13px, 0.2px);
+		}
+	}
+	&--main {
+		display: flex;
+		align-items: center;
+		padding: 10px;
+		border-radius: 50px;
+		background-color: $colorOrange;
+		svg {
+			@include svg-converter($color-light);
+		}
+		.icon {
+			width: 20px;
+			height: 20px;
+		}
+	}
+	
+
+	// .button--small
+	&--animation {
+		min-width: 140px;
+		min-height: 48px;
+		font-size: 15px;
+		line-height: 1.07;
+		border-radius: 50px;
+		color: $color-light;
+	}
+
+	&--green {
+		background-color: $color-green-dark;
+		&:hover,
+		&:active {
+			background-color: $color-primary-dark;
+		}
+		color:$color-light;
+		&:focus-visible {
+			background-color: $color-primary-default;
+
+			&::before {
+				border-color: $color-primary-light;
+			}
+		}
+	}
+
+	// .button--green
+	&--orange {
+		background-color: $colorOrange;
+
+		&:hover,
+		&:active {
+			background-color: $color-green-dark;
+		}
+
+		&:focus-visible {
+			background-color: $color-green-default;
+
+			&::before {
+				border-color: $color-green-light;
+			}
+		}
+
+		&.button--outline {
+			color: $color-green-default;
+			border-color: $color-green-default;
+
+			&:hover,
+			&:active {
+				color: $color-green-dark;
+				border-color: $color-green-dark;
+			}
+
+			&:focus-visible {
+				background-color: $color-green-default;
+			}
+		}
+	}
+
+	// .button--blue
+	&--blue {
+		background-color: #009FE3;
+
+		&:hover,
+		&:active {
+			background-color: $color-primary-dark;
+		}
+
+		&:focus-visible {
+			background-color: $color-primary-default;
+
+			&::before {
+				border-color: $color-primary-light;
+			}
+		}
+
+		&.button--outline {
+			color: $color-primary-default;
+			border-color: $color-primary-default;
+
+			&:hover,
+			&:active {
+				color: $color-primary-dark;
+				border-color: $color-primary-dark;
+			}
+
+			&:focus-visible {
+				background-color: $color-primary-default;
+			}
+		}
+	}
+
+	// .button--red
+	&--red {
+		background-color: $color-red-default;
+
+		&:hover,
+		&:active {
+			background-color: $color-red-dark;
+		}
+
+		&:focus-visible {
+			background-color: $color-red-default;
+
+			&::before {
+				border-color: $color-red-light;
+			}
+		}
+
+		&.button--outline {
+			color: $color-red-default;
+			border-color: $color-red-default;
+
+			&:hover,
+			&:active {
+				color: $color-red-dark;
+				border-color: $color-red-dark;
+			}
+
+			&:focus-visible {
+				background-color: $color-red-default;
+			}
+		}
+	}
+	
+	&-page {
+		@include btn-page(14px 27px, 50px, $color-green-700);
+        @include fontCompressor(14px, 600, 20px, 0.2px);
+        color: $color-light;
+	}
+}

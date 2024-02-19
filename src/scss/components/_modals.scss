@@ -1,0 +1,65 @@
+.popup {
+	width: 100%;
+	max-width: 530px;
+	padding: 50px 40px;
+	display: none;
+	border-radius: 14px;
+	overflow: hidden;
+	transition: all .7s;
+	background-color: $color-light;
+
+	@include media-breakpoint-down(lg) {
+		padding: 20px 15px 30px 15px;
+	}
+
+	&__wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		pointer-events: auto;
+		background-color: $color-light;
+		background-clip: padding-box;
+		outline: 0;
+	}
+
+	&__header {
+		width: 100%;
+
+		h3 {
+			display: flex;
+			font-family: $font-primary;
+			font-weight: $font-weight-normal;
+			color: $color-black;
+			font-size: 1.5rem;
+		}
+	}
+
+	&__body {
+		box-sizing: border-box;
+		position: relative;
+		flex: 1 1 auto;
+		margin-top: 30px;
+
+		@include media-breakpoint-down(lg) {
+			margin-top: 20px;
+		}
+	}
+
+	button.fancybox-close-small {
+		padding: 10px 10px 0 0;
+		width: 35px;
+		height: 35px;
+		background-color: $color-light;
+		color: $color-dark-056;
+	}
+
+	button.fancybox-close-small:hover {
+		background-color: $color-light;
+		color: $color-dark;
+	}
+}
+
+.popup-lg {
+	max-width: 800px;
+}

@@ -1,0 +1,37 @@
+.cities {
+    padding: 141px 0;
+        @include media-breakpoint-down(lg) {
+            padding: 60px 0;
+        }
+    &__top {
+        @include section-border;
+    }
+    ul {
+        column-count: 4;
+        margin-bottom: 105px;
+        @include list-reset;
+        @include media-breakpoint-down(lg) {
+            column-count: 2;
+        }
+        li {
+            margin-bottom: 30px;
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 16px;
+            }
+        }
+    }
+    a {
+        text-decoration: none;
+        @include fontCompressor(16px, 500, 20px, 0.2px);
+        @include media-breakpoint-down(lg) {
+            @include fontCompressor(14px, 500, 20px, 0.2px);
+        }
+    }
+
+    h2 {
+        margin-bottom: 105px;
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 40px;
+        }
+    }
+}

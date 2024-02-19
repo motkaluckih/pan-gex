@@ -1,0 +1,15 @@
+mixin icon(icon)
+  svg.icon
+    use(xlink:href="img/sprite.svg#" + icon)
+    
+mixin position-background(icon, iconBackground)
+  svg.iconBackground
+    use(xlink:href="img/sprite.svg#" + icon)
+
+mixin link-sity(arr)
+  ul
+    each link in arr
+        li.col-12
+          a(href="#") #{link.title}
+
+

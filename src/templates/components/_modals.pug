@@ -1,0 +1,46 @@
+.popup#callBack
+    .popup__wrapper
+        .popup__header
+            .row
+                .col-12
+                    h3 Обратный звонок
+        .popup__body
+            form
+                .form-group.row
+                    .col-md-12
+                        input.form-input(type='text', placeholder='Ваше имя')
+                .form-group.row
+                    .col-md-12
+                        input.form-input(type='tel', placeholder='Ваш телефон')
+                .form-group.row
+                    .col-12
+                        .checkbox
+                            input#cons.custom-checkbox(type='checkbox' name='pers')
+                            label(for='cons')
+                                a(href='#') Даю
+                                    span согласие на обработку персональных данных
+                .row
+                    .col-md-12.d-flex.justify-content-center
+                        button.button.button--primary(type='submit')
+                            | Отправить
+
+.popup#cities
+    .popup__wrapper
+        .popup__header
+            .row
+                .col-12
+                    h3 Города и регионы
+        .popup__body
+            .row
+                .col-12
+                    ul.city-domains
+                        li
+                            a.active(href='#') Петрозаводск
+                        li
+                            a(href='#') Санкт-Петербург
+                        li
+                            a(href='#') Мурманск
+                        li
+                            a(href='#') Псков
+                        li
+                            a(href='#') Нижний новгород

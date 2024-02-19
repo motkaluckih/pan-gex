@@ -1,0 +1,74 @@
+footer.footer
+    .container.footer__container
+        .row
+            .footer__row.d-flex
+                .col-12.col-md-4.order-first.order-md-first
+                    .footer__info
+                        if currentPage === "gasification" 
+                            a.col-5.logo.footer__logo-two(href="#")
+                                picture
+                                    source(media="(min-width:325px) and (max-width: 900px)" srcset="img/Logo-green-min.svg")
+                                    source(media="(min-width:901px)" srcset="img/Logo-green.svg")
+                                    img(src="img/350x350.gif", alt="PANEX")
+                        else if currentPage === "installation"
+                            a.col-5.logo.footer__logo-two(href="#")
+                                picture
+                                    source(media="(min-width:325px) and (max-width: 900px)" srcset="img/Logo-green-min.svg")
+                                    source(media="(min-width:901px)" srcset="img/Logo-green.svg")
+                                    img(src="img/350x350.gif", alt="PANEX")
+                        else if currentPage === "delivery"
+                            a.col-5.logo.footer__logo-two(href="#")
+                                picture
+                                    source(media="(min-width:325px) and (max-width: 900px)" srcset="img/logo-express-min.svg")
+                                    source(media="(min-width:901px)" srcset="img/logo-express.svg")
+                                    img(src="img/350x350.gif", alt="PANEX")
+                        else if currentPage === "gas_station_chain"
+                            a.col-5.logo.footer__logo-two(href="#")
+                                picture
+                                    source(media="(min-width:325px) and (max-width: 900px)" srcset="img/logo-gaz-min.svg")
+                                    source(media="(min-width:901px)" srcset="img/logo-gaz.svg")
+                                    img(src="img/350x350.gif", alt="PANEX")
+                        else 
+                            a.col-5.logo.footer__logo(href=".#")    
+                                    img(src="img/logo.svg", alt="PANEX")
+                        p.footer__address Санкт-Петербург,<br> Московское шоссе, 42. к.2 
+                        a.footer__email(href="mailto:inbox@rosgaz.info") inbox@rosgaz.info.к.2
+                .col-12.col-md-3.d-lg-block
+                    .footer-group
+                        p.footer-group__title Услуги
+                        ul.footer-menu
+                            li
+                                a(href="./delivery.html") Доставка газа
+                            li
+                                a(href="./installation.html") Установка ГБО
+                            li
+                                a(href="./gasification.html") Автономная газификация
+                            li
+                                a(href="./gas_station_chain.html") Сеть АГЗС
+                .col-12.col-md-6.col-lg-5.offset-lg-0
+                    .footer-group.footer-group--two
+                        .footer-group__wrapper
+                            p.footer-group__title Контакты
+                            ul.footer-contacts
+                                li.footer-contacts__item
+                                    span Доставка газа
+                                    a(href="tel:8 931 238-10-70") 8 931 238-10-70
+                                li.footer-contacts__item
+                                    span Установка ГБО
+                                    a(href="tel:8 800 222-80-09") 8 800 222-80-09
+                                    .socials.footer__socials
+                        ul.socials__list.col-12.col-md-6.col-lg-4.offset-lg-0.justify-content-start.justify-content-xl-end.px-0
+                                li
+                                    a(href="#" target="_blank" aria-label="Перейти в Вконтакте")
+                                        +icon("vk")
+                                li
+                                    a(href="#" target="_blank" aria-label="Перейти в Instagram")
+                                        +icon("insta")
+            .col-12.order-last
+                    .footer__copy
+                        .row.align-items-center.justify-content-between
+                            .col-12.col-xl-6
+                                p 2020 © Группа компаний PANEX
+                            .col-12.col-xl-6.footer__creator.d-flex.justify-content-start.justify-content-xl-end
+                                a(href='https://pasternak.dev' target='_blank') Разработка сайта - Pasternak.DEV
+

@@ -1,0 +1,78 @@
+extends layouts/_default
+
+block vars
+    - let pageTitle = "Вакансии";
+    - let currentPage = "about";
+
+block content
+
+    .site-pages
+        .container
+            .row.site-pages__wrapper
+                .col-12
+                h1.col-12.page-top__title.page-title.offset-xl-1  Вакансии
+                    .site-pages__btn-dom
+                .slider.site-pages__slider.col-12
+                    ul.site__list.col-12.d-flex.slider-wrapper
+                        li.action
+                            a.site__hyperlink(href="./about.html") о компании
+                        li
+                            a.site__link(href="#vacancies") вакансии
+        +position-background("pattern-page", 'icon-background')
+    
+    .vacancies.section#vacancies
+        .container
+            .vacancies__top
+                .row.vacancies__wrapper
+                    .col-12.d-flex.align-items-center.p-0.justify-content-cente
+                        .col-lg-12.col-xl-6.d-flex
+                            h2.section-title открытые вакансии
+                .row.d-flex.justify-content-between.flex-column.flex-xl-row
+                                .col-12.col-xl-3.col-lg-5.form-top 
+                                        label.form-label
+                                            span Город
+                                        select.form-select
+                                            option(value='1') Санкт-Петербург
+                                            option(value='2') Москва
+                                .col-12.col-xl-8
+                                    .vacancies__list
+                                        .vacancies__item 
+                                            .accordion(data-accordion='FAQ')
+                                                .accordion__top(data-accordion-top)
+                                                    .accordion__header.col-10.col-xl-9.d-flex.justify-content-between.flex-column.flex-xl-row
+                                                        h3 Оператор АЗГС
+                                                        span.vacancies__descr Договорная
+                                                    span.col-1.col-xl-2.accordion__cursor.cursor
+                                                            span.cursor__item.cursor__item--top
+                                                            span.cursor__item.cursor__item--bottom
+                                                .accordion__body(data-accordion-body)
+                                                    .accordion__body-content
+                                                        p В автопарке Газовой компании PANEX присутствуют минигазовозы объёмом 2 куба. Благодаря их использованию возможно значительное снижение стоимости доставки сжиженного газа небольших объёмов в Санкт-Петербург.
+                                        .vacancies__item
+                                            .accordion(data-accordion='FAQ')
+                                                .accordion__top(data-accordion-top)
+                                                    .accordion__header.col-10.col-xl-9.d-flex.justify-content-between.flex-column.flex-xl-row
+                                                        h3 Менеджер по продажам
+                                                        span.vacancies__descr от 100 000 ₽
+                                                    span.col-1.col-xl-2.accordion__cursor.cursor
+                                                        span.cursor__item.cursor__item--top
+                                                        span.cursor__item.cursor__item--bottom
+                                                .accordion__body(data-accordion-body)
+                                                    .accordion__body-content
+                                                        p В автопарке ГК «РОСГАЗ» присутствуют минигазовозы объёмом 2 куба. Благодаря их использованию возможно значительное снижение стоимости доставки сжиженного газа небольших объёмов в Санкт-Петербург.
+                                        .vacancies__item
+                                            .accordion(data-accordion='FAQ')
+                                                .accordion__top(data-accordion-top)
+                                                    .accordion__header.col-10.col-xl-9.d-flex.justify-content-between.flex-column.flex-xl-row
+                                                        h3 Оператор АГЗС
+                                                        span.vacancies__descr от 70 000 ₽
+                                                    span.col-1.col-xl-2.accordion__cursor.cursor
+                                                        span.cursor__item.cursor__item--top
+                                                        span.cursor__item.cursor__item--bottom
+                                                .accordion__body(data-accordion-body)
+                                                    .accordion__body-content
+                                                        p Сам по себе газгольдер – герметичный резервуар, но возможно возникновение утечки в запорной арматуре. Для проверки потенциальной утечки используется газоанализатор, который реагирует на мельчайшее повышение уровня пропан-бутана в воздухе.
+
+            
+
+    include components/_request

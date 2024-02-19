@@ -1,0 +1,130 @@
+extends layouts/_default
+
+block vars
+  - let pageTitle = "Автономная газификация";
+  - let currentPage = "gasification";
+
+block content
+
+  .site-pages
+    .container
+        .row.site-pages__wrapper
+            .col-12
+            h1.col-12.col-xl-10.page-top__title.page-title.offset-xl-1  Автономная газификация
+                .site-pages__btn-dom
+            .slider.site-pages__slider.col-12
+                ul.site__list.col-12.d-flex.slider-wrapper
+                    li.action
+                        a.site__link(href="#gasification") Автономная газификация
+                    li
+                        a.site__link(href="#calculator") Калькулятор расхода газа
+    +position-background("pattern-page", 'icon-background')
+
+  .description.description-gazification#gazification
+    .container
+        h2.col-12.description__text.p-0   Компания «РОСГАЗ» качественно выполнит монтаж подземного или наземного резервуара для сжиженного газа (газгольдера или мини-газгольдера). Подключим котел и выполним монтажные работы «под ключ».
+        .row.d-flex.justify-content-between
+            img.col-xl-6.col-lg-12(src="img/services-preview.jpg", alt="Перевод авто на газ")
+            .col-xl-5.col-lg-12.d-flex.flex-column
+                  p.description__text Предоставляем скидки для наших клиентов на установку газгольдеров и доставку газа.
+                    a Как стать клиентом?
+                  ul
+                      li 
+                        +icon("green_arrow")
+                        span Дача, дачный поселок
+                      li 
+                        +icon("green_arrow")
+                        span Загородный дом
+                      li 
+                        +icon("green_arrow")
+                        span Коттедж, коттеджный район
+                      li 
+                        +icon("green_arrow")
+                        span Предприятие
+                      li 
+                        +icon("green_arrow")
+                        span Завод
+                      li 
+                        +icon("green_arrow")
+                        span Ангар
+                      li 
+                        +icon("green_arrow")
+                        span Другие производственные помещения
+
+  section.calculator.section.calculator-gazification#calculator
+              .container
+                  .section__top.calculator__top
+                      .row
+                          .col-12.d-flex.align-items-center
+                              h2.section-title.section__title Калькулятор окупаемости
+                          //- .col-12.col-lg-9.col-xl-6
+                          //-     p.section-subtext.section__subtext Узнайте, сколько вы будете экономить на топливе после установки ГБО в РОСГАЗ
+                  .calculator-form
+                      .row
+                          .col-12.col-lg-6.col-xl-6
+                              label.form-label
+                                  span Бензин для заправки
+                              select.form-select
+                                  option(value='1') АИ-95
+                                  option(value='2') АИ-92
+
+                              label.form-label
+                                  span Количество автомобилей
+                              select.form-select
+                                  option(value='1') 1
+                                  option(value='2') 2
+                                  option(value='3') 3
+                                  option(value='4') 4
+                                  option(value='5') 5
+                                  option(value='6') 6
+                                  option(value='7') 7
+                                  option(value='8') 8
+                                  option(value='9') 9
+                                  option(value='10') 10
+
+                              label.form-label
+                                  span Расход топлива на 100 км (л)
+                              .from-slider.from-slider-green
+                                  input.from-slider__input(type='text' value="12")
+                                  input.form-slider__range(type='range' step='1' min='7' max='35' value='12')
+                              label.form-label
+                                  span Пробег в год (км)
+                              .from-slider.from-slider-green
+                                  input.from-slider__input(type='text' value="40000")
+                                  input.form-slider__range(type='range' step='10000' min='20000' max='100000' value='40000')
+
+                          .col-12.col-xl-5.col-lg-6.offset-xl-1
+                              .calculator-form__box
+                                  .calculator-form__group
+                                      p Экономия в год <span class="number"><span>104 000</span> ₽</span>
+                                      span.calculator-form__descr Мы&nbsp;открываем десятки новых АГЗС, расширяем географию доставки сжиженного газа
+                                  .calculator-form__group
+                                      p Экономия за 5 лет <span class="number"><span>520 000</span> ₽</span>
+                                      span.calculator-form__descr Мы&nbsp;открываем десятки новых АГЗС, расширяем географию доставки сжиженного газа
+                                  .calculator-form__group.calculator-form__group--blue
+                                      p Срок окупаемости <span class="number"><span>4</span> месяца</span>
+                                      span.calculator-form__descr Мы&nbsp;открываем десятки новых АГЗС, расширяем географию доставки сжиженного газа
+                                  button.button.button--green.button--large.calculator-form__submit(type="submit") Начать экономить
+  section.trust.trust-gasification
+          .container
+              .trust__top
+                  .row
+                      .col-12.d-flex.align-items-center.p-0.justify-content-cente
+                          .col-lg-12.col-xl-6.d-flex
+                              h2.section-title Почему нам доверяют?
+                  .row.trust__wrapper
+                    ul.d-flex.align-items-start.justify-content-cente.flex-column.flex-xl-row.flex-lg-column
+                        li.col-lg-12.col-xl-4.d-flex.flex-column.trust__green
+                            +icon("wallet")
+                            h3 Цена
+                            p Мы не работаем с посредниками, а работаем "напрямую" с производителями, только это позволяет снижать рыночную цену до 25%
+                        li.col-lg-12.col-xl-4.d-flex.flex-column.trust__green
+                            +icon("human")
+                            h3 Опыт
+                            p Мы работаем в газовой отрасли уже более 7 лет. Газ - это просто
+                        li.col-lg-12.col-xl-4.d-flex.flex-column.trust__green
+                            +icon("safety")
+                            h3 Безопасно и надежно
+                            p У нас только новая и современная техника и оборудование. Весь транспорт и оборудование регулярно и своевременно проходят техническое обслуживание
+  
+  include components/_request

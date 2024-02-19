@@ -1,0 +1,86 @@
+-
+    var menuList = [
+        {"title": "Газификация", "url": "./gasification.html", "pageName": "gasification", "color": "green"},
+        {"title": "ГБО", "url": "./installation.html", "pageName": "installation", "color": "green"},
+        {"title": "Доставка газа", "url": "delivery.html", "pageName": "delivery", "color": "orange"},
+        {"title": "Услуги", "url": "./services.html", "pageName": "services", "color": "orange"},
+        {"title": "Блог", "url": "./blog.html", "pageName": "blog", "color": "orange"},
+        {"title": "О нас", "url": "./about.html", "pageName": "about", "color": "orange"},
+        {"title": "Контакты", "url": "./contacts.html", "pageName": "contacts", "color": "orange"},
+    ]
+
+header.header
+    .header-mobile.d-flex.d-lg-none
+        a.header-mobile__btn(href="tel:89210113111")
+            +icon("phone")
+            | 8 (921) 011-31-11
+        button.header-mobile__btn.header-mobile__btn-color(data-fancybox='' data-animation-duration='50' data-src='#fastOrder' href='javascript:;')
+            +icon("headphone")
+            | Заказать звонок
+    .header-top.d-flex.d-none.d-lg-block
+        .container.header-top__wrapper.d-flex.align-items-center
+            .header-contact.header-top__contact
+                .header-contact__label
+                    span(data-fancybox='' data-animation-duration='50' data-src='#cities') Петрозаводск
+                .header-contact__content
+                    p  ул. Новосулажгорская, 20                      
+            .header-contact.header-top__contact
+                .header-contact__label
+                    p Доставка газа
+                .header-contact__content
+                    a(href="tel:88002228009") 8 (800) 222-80-09
+            .header-contact.header-top__contact
+                .header-contact__label
+                    p Установка ГБО
+                .header-contact__content
+                    a(href="tel:89210113111") 8 (921) 011-31-11
+    .header-body
+        .container
+            .header-body__container.d-flex.justify-content-between.header-body__main
+                a.hmb#hmbOpen.header-burger.header__burger.d-flex.d-xl-none(href='javascript:void(0)')
+                    +icon("burger")
+                    if currentPage === "gasification" 
+                            a.header-body__logo-green.logo(href="./")
+                                picture
+                                    source(media="(min-width:325px) and (max-width: 900px)" srcset="img/Logo-green-min.svg")
+                                    source(media="(min-width:901px)" srcset="img/Logo-green.svg")
+                                    img(src="img/350x350.gif", alt="PANEX")
+                    else if currentPage === "installation"
+                        a.header-body__logo-green.logo(href="./")
+                            picture
+                                source(media="(min-width:325px) and (max-width: 900px)" srcset="img/Logo-green-min.svg")
+                                source(media="(min-width:901px)" srcset="img/Logo-green.svg")
+                                img(src="img/350x350.gif", alt="PANEX")
+                    else if currentPage === "delivery"
+                        a.header-body__logo-green.logo(href="./")
+                            picture
+                                source(media="(min-width:325px) and (max-width: 900px)" srcset="img/logo-express-min.svg")
+                                source(media="(min-width:901px)" srcset="img/logo-express.svg")
+                                img(src="img/350x350.gif", alt="PANEX")
+                    else if currentPage === "gas_station_chain"
+                        a.header-body__logo-green.logo(href="./")
+                            picture
+                                source(media="(min-width:325px) and (max-width: 900px)" srcset="img/logo-gaz-min.svg")
+                                source(media="(min-width:901px)" srcset="img/logo-gaz.svg")
+                                img(src="img/350x350.gif", alt="PANEX")
+                    else 
+                        a.header-body__logo.logo.pt(href="./")    
+                            img(src="img/logo.svg", alt="PANEX")
+                nav.header-body__nav.nav.d-none.d-xl-block
+                    ul.menu 
+                        each link in menuList
+                            li.menu__item(class=(link.pageName === currentPage ? "active" : undefined))
+                                a(href=link.url class=link.color) #{link.title} 
+                
+                if currentPage === "gasification" 
+                    button.button.button--green.d-none.d-lg-flex(data-fancybox='' data-animation-duration='50' data-src='#callBack') Заказать звонок
+                else if currentPage === "installation"
+                    button.button.button--green.d-none.d-lg-flex(data-fancybox='' data-animation-duration='50' data-src='#callBack') Заказать звонок
+                else if currentPage === "delivery"
+                   button.button.button--orange.d-none.d-lg-flex(data-fancybox='' data-animation-duration='50' data-src='#callBack') Заказать звонок
+                else if currentPage === "gas_station_chain"
+                    button.button.button--blue.d-none.d-lg-flex(data-fancybox='' data-animation-duration='50' data-src='#callBack') Заказать звонок
+                else 
+                   button.button.button--orange.d-none.d-lg-flex(data-fancybox='' data-animation-duration='50' data-src='#callBack') Заказать звонок
+                
+

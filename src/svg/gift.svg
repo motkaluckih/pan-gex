@@ -1,0 +1,11 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9 27H55V56C55 57.6569 53.6569 59 52 59H12C10.3431 59 9 57.6569 9 56V27Z" stroke="#2E3237" stroke-width="2"/>
+    <rect x="5" y="17" width="54" height="10" rx="3" stroke="#2E3237" stroke-width="2"/>
+    <path d="M37 59L37 47" stroke="#2E3237" stroke-width="2" stroke-miterlimit="16" stroke-linecap="square"/>
+    <path d="M37 35V17" stroke="#2E3237" stroke-width="2" stroke-miterlimit="16" stroke-linecap="square"/>
+    <path d="M27 59V17" stroke="#2E3237" stroke-width="2" stroke-miterlimit="16" stroke-linecap="square"/>
+    <path d="M36 12V16.1111C36 16.602 36.398 17 36.8889 17H44C47.3137 17 50 14.3137 50 11C50 7.68629 47.3137 5 44 5H43C39.134 5 36 8.13401 36 12Z" stroke="#2E3237" stroke-width="2" stroke-miterlimit="16" stroke-linecap="square"/>
+    <path d="M28 12V16.1111C28 16.602 27.602 17 27.1111 17H20C16.6863 17 14 14.3137 14 11C14 7.68629 16.6863 5 20 5H21C24.866 5 28 8.13401 28 12Z" stroke="#2E3237" stroke-width="2" stroke-miterlimit="16" stroke-linecap="square"/>
+    <rect x="28" y="13" width="8" height="4" stroke="#2E3237" stroke-width="2"/>
+    <line x1="37" y1="44" x2="37" y2="42" stroke="#2E3237" stroke-width="2"/>
+</svg>

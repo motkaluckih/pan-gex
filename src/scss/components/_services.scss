@@ -1,0 +1,98 @@
+// .services ====================================================================================================
+.services {
+  padding: 140px 0 108px;
+  @include media-breakpoint-down(md) {
+    padding: 60px 0;
+  }
+  background-color: $colorBgHeader;
+
+  &__group-icon {
+    padding: 10px;
+    border: $borderGray;
+    border-radius: 50px;
+    line-height: 0;
+  }
+  // .services__group
+  &__group {
+    &:not(:last-child) {
+      margin-bottom: 95px;
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 70px;
+      }
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 60px;
+      }
+    }
+  }
+}
+
+// .services-group ====================================================================================================
+.services-group {
+  padding-top: 20px;
+  border-top: $borderGray;
+  @include media-breakpoint-down(lg) {
+    padding-top:3px;
+  }
+
+  &__list {
+    list-style: none;
+    padding-top: 75px;
+    @include media-breakpoint-down(lg) {
+      padding-top: 16px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 30px 0px;
+      text-decoration: none;
+      border: none;
+      border-bottom: $borderGray;
+      border-radius: 0px;
+      transition: color $short, padding $short, border-radius $short, background-color $short, transform $short;
+      @include fontCompressor(20px, 500, 32px, 0.2px);
+
+      @include media-breakpoint-down(lg) {
+        padding: 30px 0;
+        @include fontCompressor(16px, 500, 20px, -0.08px);
+      }
+      @include media-breakpoint-down(md) {
+        padding: 16px 0;
+      }
+
+      transition: background-color $transition, transform $transition;
+
+      &:hover {
+        color: $color-light;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 100px;
+        background-color: $colorOrange;
+        transform: scale(1.1);
+
+        @include media-breakpoint-down(xl) {
+          transform: scale(1.07);
+        }
+
+        @include media-breakpoint-down(md) {
+          color: inherit;
+          background-color: transparent;
+          transform: unset;
+        }
+      }
+    
+      .icon {
+        width: 20px;
+        height: 20px;
+        
+        @include media-breakpoint-down(lg) {
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+extends layouts/_default
+
+block vars
+  - let pageTitle = "Контактная информация";
+  - let currentPage = "contacts";
+
+block content
+
+  .site-pages.site-pages-station
+          .container
+              .row.site-pages__wrapper
+                  .col-12
+                  h1.col-12.page-top__title.page-title.page-title-station Контактная информация
+              +position-background("pattern-page", 'icon-background')
+
+  .contacts
+    .container
+      .row
+        .col-12
+          h2.section-title.contacts__title Газовая компания PANEX
+      .contacts__items
+        .row
+          .col-12.col-md-6.col-lg-3
+            p Петрозаводск <br> ул. Новосулажгорская, 20
+          .col-12.col-md-6.col-lg-3.d-flex.align-items-start.align-items-xl-end
+            a(href="mailto:sale@rosgaz.info") inbox@panex.pro
+          .col-12.col-md-6.col-lg-3.d-flex.flex-column
+            span Колл-центр
+            a(href="tel:89312381070")  8 931 238-10-70
+          .col-12.col-md-6.col-lg-3
+            p пн-пт 9:00 — 17:00 <br> сб,вс — выходной
+      .contacts__list
+          .row 
+            .col-12.d-flex.flex-column.flex-xl-row
+                .contacts-item.col-lg-12.col-xl-4
+                    p.contacts-item__title Доставка газа
+                    a.contacts-item__phone(href="tel:88002228009") 8 800 222-80-09
+                    a.contacts-item__phone(href="mailto:sale@panex.pro") sale@panex.pro
+                .contacts-item.col-lg-12.col-xl-4
+                    p.contacts-item__title Автономная газификация
+                    a.contacts-item__phone(href="tel:89312381070") 8 931 238-10-70
+                    a.contacts-item__phone(href="mailto:sale@panex.pro") sale@panex.pro
+                .contacts-item.col-lg-12.col-xl-4
+                    p.contacts-item__title Контроль качества
+                    a.contacts-item__phone(href="tel:89212255225") 8 921 225-52-25
+                    a.contacts-item__phone(href="mailto:sale@panex.pro") sale@panex.pro
+
+  include components/_map
+  include components/_request

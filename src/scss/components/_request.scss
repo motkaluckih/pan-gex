@@ -1,0 +1,34 @@
+// .request ====================================================================================================
+.request {
+  position: relative;
+  color: $color-light;
+  background-color: $colorBlue;
+  @include media-breakpoint-down(sm) {
+    padding: 69px 0;
+  }
+  h2 {
+    @include fontCompressor(41px, 500, 50px, -0.408px);
+    @include media-breakpoint-down(lg) {
+      @include fontCompressor(19px, 500, 26px, 0.2px);
+    }
+  }
+  // .request__subtext
+  p {
+    color:$color-light;
+    @include fontCompressor(16px, 400, 22px, 0.2px);
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 20px;
+        @include fontCompressor(14px, 400, 20px, 0.2px);
+    }
+  }
+
+  // .request__btn
+  &__btn {
+    margin-right: auto;
+    margin-left: auto;
+    // background-color: $colorOrange;
+    @include media-breakpoint-down(lg) {
+      margin-left: 0;
+    }
+  }
+}

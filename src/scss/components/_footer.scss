@@ -1,0 +1,218 @@
+// .footer ====================================================================================================
+.footer {
+  padding: 70px 0 33px;
+  font-size: 17px;
+  line-height: 1.53;
+  letter-spacing: -0.005em;
+
+  @include media-breakpoint-down(md) {
+    padding: 60px 0;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  // .footer__container
+  &__container {
+    max-width: 1406px !important;
+  }
+  &__row {
+      padding: 0;
+      padding-bottom: 44px;
+      @include media-breakpoint-down(xl) {
+        padding-bottom: 20px;
+      }
+      // border-bottom: 1px solid $colorGraiOpaciity;
+  }
+
+  // .footer__info
+  // &__info {
+  // }
+
+  // .footer__logo
+
+  &__logo-two {
+    padding: 0;
+    justify-content: flex-start;
+    img{
+      // height: 70px;
+      @include media-breakpoint-down(lg) {
+        height: 20px;
+      }
+    }
+  }
+  &__logo {
+    padding: 0;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 22px;
+      img {
+        height: 20px;
+      }
+    }
+  }
+  &__row {
+      @include media-breakpoint-down(lg) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  // .footer__address
+  &__address {
+    margin-bottom: 26px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 28px;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 21px;
+    }
+  }
+
+  // .footer__email
+  &__email {
+    display: inline-block;
+    margin-bottom: 32px;
+    color: $color-primary-default;
+    text-decoration: none;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 26px;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  // .footer__socials
+  // &__socials {
+  // }
+
+  // .footer__copy
+  &__copy {
+    // margin-top: 20px;
+    color: $color-black;
+    border-top: $borderGray;
+    padding-top: 20px;
+  
+    // @include media-breakpoint-down(lg) {
+    //   margin-top: 60px;
+    // }
+
+    // @include media-breakpoint-down(md) {
+    //   // margin-top: 40px;
+    //   text-align: center;
+    // }
+  }
+
+  p {
+    @include fontCompressor(13px, 400, 20px, 0.2px);
+    @include media-breakpoint-down(xl) {
+      @include fontCompressor(13px, 400, 16px, 0.2px);
+    }
+  }
+
+  &__creator{
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+      color: $color-black;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    @include media-breakpoint-down(md) {
+      margin-top: 6px;
+      text-align: left;
+      justify-content: flex-start;
+    }
+  }
+}
+
+// .footer-group ====================================================================================================
+.footer-group {
+  &--two {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+      @include media-breakpoint-down(lg) {
+        flex-direction: column;
+      }
+  }
+  // &__wrapper {
+  // }
+  
+  @include media-breakpoint-down(md) {
+    margin-bottom: 30px;
+    gap: 30px;
+  }
+
+  // .footer-group__title
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-size: 21px;
+    font-family: $font-primary;
+    line-height: 1.24;
+    letter-spacing: -0.005em;
+  }
+}
+
+// .footer-menu ====================================================================================================
+.footer-menu {
+  list-style: none;
+
+  li {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+// .footer-contacts ====================================================================================================
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  margin-right: -15px;
+  margin-bottom: -16px;
+  margin-left: -15px;
+  list-style: none;
+
+  @include media-breakpoint-down(xl) {
+    margin-right: -6px;
+    margin-left: -6px;
+  }
+
+  // .footer-contacts__item
+  &__item {
+    // width: calc(1 / 2 * 100% - 30px);
+    margin-right: 15px;
+    margin-bottom: 16px;
+    margin-left: 15px;
+
+    @include media-breakpoint-down(xl) {
+      // width: calc(1 / 2 * 100% - 12px);
+      margin-right: 6px;
+      margin-left: 6px;
+    }
+
+    span {
+      display: block;
+      color: $color-dark-023;
+      font-size: 15px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

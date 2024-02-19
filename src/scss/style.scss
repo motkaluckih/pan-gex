@@ -1,0 +1,63 @@
+// * ====================================================================================================
+// * VENDORS
+// * ====================================================================================================
+
+// Normalize
+@import "vendors/normalize";
+
+// * ====================================================================================================
+// * GLOBAL
+// * ====================================================================================================
+// @import "./global/settings"; // Основные настроечные переменные
+@import "./global/custom-bootstrap"; // Кастомные настройки для Bootstrap
+@import "./global/helpers"; // Миксины и функции
+@import "./global/fonts"; // Шрифты
+@import "./global/variables"; // Переменные
+@import "./global/global"; // Глобальные стили
+
+// * ====================================================================================================
+// * SMALL COMPONENTS
+// * ====================================================================================================
+@import "./components/button";
+@import "./components/logo";
+@import "./components/nav";
+@import "./components/slider";
+@import "./components/socials";
+@import "./components/breadcrumbs";
+@import "./components/page-links";
+@import "./components/accordion";
+@import "./components/pagination";
+@import "./components/form";
+
+// * ====================================================================================================
+// * BIG COMPONENTS
+// * ====================================================================================================
+@import "./components/header";
+@import "./components/footer";
+@import "./components/sidebar";
+@import "./components/modals";
+@import "./components/city-link";
+@import "./components/sheme";
+@import "./components/hero";
+@import "./components/services-preview";
+@import "./components/info";
+@import "./components/request";
+@import "./components/description";
+@import "./components/features";
+@import "./components/map";
+@import "./components/vacancies";
+@import "./components/offers";
+@import "./components/works";
+@import "./components/services";
+@import "./components/blog";
+@import "./components/contacts";
+@import "./components/calculator";
+@import "./components/advantages";
+@import "./components/icon-center";
+@import "./components/company";
+@import "./components/news";
+@import "./components/trust";
+@import "./components/benefit";
+@import "./components/refill";
+@import "./components/cities";
+@import "./components/our-works";

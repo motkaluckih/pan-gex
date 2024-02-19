@@ -1,0 +1,211 @@
+extends layouts/_default
+
+block vars
+    - let pageTitle = "Доставка газа";
+    - let currentPage = "delivery";
+
+block content
+
+    .site-pages.site-pages-delivery
+        .container
+            .row.site-pages__wrapper
+                .col-10
+                h1.col-10.page-top__title.page-title  Доставка газа в Санкт-Петербурге и Ленинградской области
+        +position-background("pattern-page", 'icon-background')
+
+    .description.description-delivery
+        .container
+                h2.col-12.description__text.p-0     Бесплатно доставим сжиженный углеводородный газ (пропан-бутан) в Санкт-Петербурге и Ленинградской области. Вы платите только за объём СУГ. Доставка и заправка осуществляются бесплатно.
+                .row.d-flex.justify-content-between
+                    .col-xl-6.col-lg-12
+                        img(src="img/gas-carrier.jpg", alt="Автогазовоз")
+                    .col-xl-5.col-lg-12.d-flex.flex-column
+                        p.description__text Только наша компания заправляет газгольдеры на объём от 300 литров. Перед заправкой бесплатно проверим ваш газгольдер на герметичность газоанализатором и бесплатно устраним утечку, если она есть.
+                        ul
+                            li 
+                                +icon("green_arrow")
+                                span Цена ниже рыночной
+                            li 
+                                +icon("green_arrow")
+                                span Доставка 24/7/365
+                            li 
+                                +icon("green_arrow")
+                                span Качественный автомобильный газ (ПБА) (расход меньше)
+                            li 
+                                +icon("green_arrow")
+                                span Самые труднопроходимые места, дачные поселки, СНТ
+                        button.button.button--small.button--orange Узнать цену
+    section.services-preview.section.services-preview-delivery
+        .container
+            .services-preview__top
+                .row
+                    .col-12.d-flex.align-items-center.services-preview__top-p-0
+                        .col-6.d-flex
+                            h2.section-title.section__title ПОЧЕМУ МЫ
+                        .col-6.d-flex.section__left.justify-content-center.justify-content-lg-end
+                                .services-preview__btn-dom.d-flex-gap
+                                .services-preview__dots-inner.slider-dots
+                    .col-12.slider.services-preview__slider 
+                        ul.slider-wrapper
+                            li.col-12.col-lg-6.hero-slider.d-flex.justify-content-between.d-flex.flex-column-reverse.flex-xl-row.flex-lg-column-reverse
+                                .services-preview__img.col-6.col-xl-6.col-lg-12
+                                    img(src="img/company.jpg", alt="Перевод авто на газ")
+                                .services-preview__main.col-5.col-xl-5.col-lg-12
+                                    h3 Собственная газонаполнительная станция               
+                                    p Мы можем удерживать низкую стоимость газа на протяжении долгого времени, даже при росте закупочной цены на рынке СУГ.
+                            li.col-12.col-lg-6.hero-slider.d-flex.justify-content-between.d-flex.flex-column-reverse.flex-xl-row.flex-lg-column-reverse
+                                .services-preview__img.col-6.col-xl-6.col-lg-12
+                                    img(src="img/company.jpg", alt="Перевод авто на газ")
+                                .services-preview__main.col-5.col-xl-5.col-lg-12
+                                    h3 Собственная газонаполнительная станция               
+                                    p Мы можем удерживать низкую стоимость газа на протяжении долгого времени, даже при росте закупочной цены на рынке СУГ.
+                            li.col-12.col-lg-6.hero-slider.d-flex.justify-content-between.d-flex.flex-column-reverse.flex-xl-row.flex-lg-column-reverse
+                                .services-preview__img.col-6.col-xl-6.col-lg-12
+                                    img(src="img/company.jpg", alt="Перевод авто на газ")
+                                .services-preview__main.col-5.col-xl-5.col-lg-12
+                                    h3 Собственная газонаполнительная станция               
+                                    p Мы можем удерживать низкую стоимость газа на протяжении долгого времени, даже при росте закупочной цены на рынке СУГ.
+                            li.col-12.col-lg-6.hero-slider.d-flex.justify-content-between.d-flex.flex-column-reverse.flex-xl-row.flex-lg-column-reverse
+                                .services-preview__img.col-6.col-xl-6.col-lg-12
+                                    img(src="img/company.jpg", alt="Перевод авто на газ")
+                                .services-preview__main.col-5.col-xl-5.col-lg-12
+                                    h3 Собственная газонаполнительная станция               
+                                    p Мы можем удерживать низкую стоимость газа на протяжении долгого времени, даже при росте закупочной цены на рынке СУГ.
+                            li.col-12.col-lg-6.hero-slider.d-flex.justify-content-between.d-flex.flex-column-reverse.flex-xl-row.flex-lg-column-reverse
+                                .services-preview__img.col-6.col-xl-6.col-lg-12
+                                    img(src="img/company.jpg", alt="Перевод авто на газ")
+                                .services-preview__main.col-5.col-xl-5.col-lg-12
+                                    h3 Собственная газонаполнительная станция               
+                                    p Мы можем удерживать низкую стоимость газа на протяжении долгого времени, даже при росте закупочной цены на рынке СУГ.
+    section.trust.trust-delivery
+        .container
+            .trust__top
+                .row
+                    .col-12.d-flex.align-items-center.p-0.justify-content-cente
+                        .col-lg-12.col-xl-6.d-flex
+                            h2.section-title Почему нам доверяют?
+                .row.trust__wrapper.trust-delivery__wrapper
+                    ul.col-12.d-flex.align-items-start.justify-content-cente.flex-column.flex-xl-row.flex-lg-column
+                        li.col-12.col-lg-12.col-xl-3.d-flex.flex-row.flex-xl-column.flex-lg-row.align-items-xl-start.align-items-xs-center.align-items-sm-center
+                            +icon("one")
+                            h3 Звонок либо заявка с сайта
+                        li.col-12.col-lg-12.col-xl-3.d-flex.flex-row.flex-xl-column.flex-lg-row.align-items-xl-start.align-items-xs-center.align-items-sm-center
+                            +icon("two")
+                            h3 Согласование условий поставки
+                        li.col-12.col-lg-12.col-xl-3.d-flex.flex-row.flex-xl-column.flex-lg-row.align-items-xl-start.align-items-xs-center.align-items-sm-center
+                            +icon("three")
+                            h3 Подписание договора и оплата
+                        li.li-completed.col-12.col-lg-12.col-xl-3.d-flex.flex-row.flex-xl-column.flex-lg-row.align-items-xl-start.align-items-xs-center.align-items-sm-center
+                            +icon("completed")
+                            h3 Быстрая доставка газа
+    .refill
+        .container
+                .row.refill__wrapper.d-flex.justify-content-between
+                    .col-xl-6.col-lg-12
+                        ul.d-flex.flex-wrap
+                            li.col-12.col-lg-12.col-xl-5.d-flex.flex-row.align-items-xxl-start.align-items-xs-center.align-items-sm-center 
+                                +icon("objects1")
+                                span Частные дома
+                            li.col-12.col-lg-12.col-xl-5.d-flex.flex-row.align-items-xxl-start.align-items-xs-center.align-items-sm-center 
+                                +icon("objects2")
+                                span Автосервисы
+                            li.col-12.col-lg-12.col-xl-5.d-flex.flex-row.align-items-xxl-start.align-items-xs-center.align-items-sm-center 
+                                +icon("objects3")
+                                span Склады
+                            li.col-12.col-lg-12.col-xl-5.d-flex.flex-row.align-items-xxl-start.align-items-xs-center.align-items-sm-center 
+                                +icon("objects4")
+                                span Промышленные цеха
+                            li.col-12.col-lg-12.col-xl-5.d-flex.flex-row.align-items-xxl-start.align-items-xs-center.align-items-sm-center 
+                                +icon("objects5")
+                                span Турбазы
+                            li.col-12.col-lg-12.col-xl-5.d-flex.flex-row.align-items-xxl-start.align-items-xs-center.align-items-sm-center 
+                                +icon("objects6")
+                                span Магазины
+                    .col-xl-5.col-lg-12.d-flex.flex-column
+                        h2.col-xl-10.col-lg-12.p-0 Заправляем газгольдеры на объектах в городе Санкт-Петербург.
+                        p.col-xl-8.col-lg-12.p-0 В любых условиях, в любое время.
+                        button.button.button--small.button--orange Заправиться
+    .vacancies
+        .container
+            .vacancies__top
+                    .row
+                        .col-12.d-flex.align-items-center.p-0.justify-content-cente
+                            .col-lg-12.col-xl-6.d-flex
+                                h2.section-title Вопросы и ответы
+                    .row.mt-80
+                        .col-12.col-lg-12
+                            .vacancies__list
+                                .vacancies__item
+                                    .accordion(data-accordion='FAQ')
+                                        .accordion__top(data-accordion-top)
+                                            h3.col-10.col-xl-10.col-lg-11 Как осуществляется доставка газа в Санкт-Петербург?
+                                            span.col-2.col-xl-2.col-lg-1.accordion__cursor.cursor
+                                                span.cursor__item.cursor__item--top
+                                                span.cursor__item.cursor__item--bottom
+                                        .accordion__body(data-accordion-body)
+                                            .accordion__body-content
+                                                p В автопарке Газовой компании PANEX присутствуют минигазовозы объёмом 2 куба. Благодаря их использованию возможно значительное снижение стоимости доставки сжиженного газа небольших объёмов в Санкт-Петербург.
+                                .vacancies__item
+                                    .accordion(data-accordion='FAQ')
+                                        .accordion__top(data-accordion-top)
+                                            h3.col-10.col-xl-10.col-lg-11 Почему другие компании возят только большие объемы газа, а мы доставляем пропан-бутан в Санкт-Петербург от 200 литров?
+                                            span.col-2.col-xl-2.col-lg-1.accordion__cursor.cursor
+                                                span.cursor__item.cursor__item--top
+                                                span.cursor__item.cursor__item--bottom
+                                        .accordion__body(data-accordion-body)
+                                            .accordion__body-content
+                                                p В автопарке ГК «РОСГАЗ» присутствуют минигазовозы объёмом 2 куба. Благодаря их использованию возможно значительное снижение стоимости доставки сжиженного газа небольших объёмов в Санкт-Петербург.
+                                .vacancies__item
+                                    .accordion(data-accordion='FAQ')
+                                        .accordion__top(data-accordion-top)
+                                            h3.col-10.col-xl-10.col-lg-11 Как происходит проверка газгольдера на утечку?
+                                            span.col-2.col-xl-2.col-lg-1.accordion__cursor.cursor
+                                                span.cursor__item.cursor__item--top
+                                                span.cursor__item.cursor__item--bottom
+                                        .accordion__body(data-accordion-body)
+                                            .accordion__body-content
+                                                p Сам по себе газгольдер – герметичный резервуар, но возможно возникновение утечки в запорной арматуре. Для проверки потенциальной утечки используется газоанализатор, который реагирует на мельчайшее повышение уровня пропан-бутана в воздухе.
+                                .vacancies__item
+                                    .accordion(data-accordion='FAQ')
+                                        .accordion__top(data-accordion-top)
+                                            h3.col-10.col-xl-10.col-lg-11 Что такое газонаполнительная станция?
+                                            span.col-2.col-xl-2.col-lg-1.accordion__cursor.cursor
+                                                span.cursor__item.cursor__item--top
+                                                span.cursor__item.cursor__item--bottom
+                                        .accordion__body(data-accordion-body)
+                                            .accordion__body-content
+                                                p Газонаполнительная станция (ГНС) - комплекс для приема, хранения и распределения сжиженных углеводородных газов (СУГ). Это высоко автоматизированная станция с высоким уровнем механизации и безопасности. СУГ поступает на ГНС «РОСГАЗ» в железнодорожных вагонах-цистернах, затем перекачивается в наши газовозы и доставляется на ваши объекты.
+                                .vacancies__item
+                                    .accordion(data-accordion='FAQ')
+                                        .accordion__top(data-accordion-top)
+                                            h3.col-10.col-xl-10.col-lg-11 Зачем смешивают пропан и бутан? И что такое «зимний» СУГ?
+                                            span.col-2.col-xl-2.col-lg-1.accordion__cursor.cursor
+                                                span.cursor__item.cursor__item--top
+                                                span.cursor__item.cursor__item--bottom
+                                        .accordion__body(data-accordion-body)
+                                            .accordion__body-content
+                                                p Сжиженный бутан в чистом виде не будет работать при отрицательных температурах. Тогда как применение чистого пропана противопоказано в условиях жаркого климата, поскольку высокая температура вызывает чрезмерное повышение давления в газовом резервуаре.
+                                                p Так как для каждого региона нецелесообразно производить отдельную марку газа, с целью унификации ГОСТом предусмотрена смесь с определенным содержанием двух компонентов в рамках установленных норм.
+                                                p В «зимнем» газе доля пропана достигает 80%, поэтому он надежно работает при отрицательных температурах. В «летнем» СУГ пропана около 50%. Бутан значительно дешевле, но качество газа важнее, чем цена.
+                                .vacancies__item
+                                    .accordion(data-accordion='FAQ')
+                                        .accordion__top(data-accordion-top)
+                                            h3.col-10.col-xl-10.col-lg-11 Как изменяется плотность газа в зависимости от температуры на улице?
+                                            span.col-2.col-xl-2.col-lg-1.accordion__cursor.cursor
+                                                span.cursor__item.cursor__item--top
+                                                span.cursor__item.cursor__item--bottom
+                                        .accordion__body(data-accordion-body)
+                                            .accordion__body-content
+                                                p При повышении температуры плотность смеси пропан-бутана уменьшается, а при снижении наоборот становится выше.
+    section.cities
+        .container
+            .cities__top
+                .row
+                    .col-12.d-flex.align-items-center.p-0.justify-content-cente
+                        .col-lg-12.col-xl-6.d-flex
+                            h2.section-title Доставка газа
+                .row.cities__wrapper
+                    -var listCities = [ {"title":"Бокситогорск"},{"title":"Волосово"},{"title":"Волхов"},{"title":"Всеволожск"},{"title":"Выборг"},{"title":"Высоцк"},{"title":"Гатчина"},{"title":"Ивангород"},{"title":"Каменногорск"},{"title":"Кингисепп"},{"title":"Кириши"},{"title":"Кировск"},{"title":"Коммунар"},{"title":"Кудрово"},{"title":"Лодейное Поле"},{"title":"Луга"},{"title":"Любань"},{"title":"Мурино"},{"title":"Никольское"},{"title":"Новая Ладога"},{"title":"Отрадное"},{"title":"Пикалёво"},{"title":"Подпорожье"},{"title":"Приморск"},{"title":"Приозерск"},{"title":"Светогорск"},{"title":"Сертолово"},{"title":"Сланцы"},{"title":"Сосновый Бор"},{"title":"Сясьстрой"},{"title":"Тихвин"},{"title":"Тосно"},{"title":"Шлиссельбург"},{"title":"Рощино"},{"title":"Ульяновка"},{"title":"Янино-1"},{"title":"Мга"},{"title":"Кузьмоловский"},]
+                    +link-sity(listCities)
+                        
+    include components/_request

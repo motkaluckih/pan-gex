@@ -1,0 +1,101 @@
+extends layouts/_default
+
+block vars
+    - let pageTitle = "Сеть газовых заправок";
+    - let currentPage = "gas_station_chain";
+
+block content
+
+    .site-pages.site-pages-station
+        .container
+            .row.site-pages__wrapper
+                .col-12
+                h1.col-12.page-top__title.page-title.page-title-station Сеть газовых заправок
+            +position-background("pattern-page", 'icon-background')
+    .description.description-gbo.description-station
+        .container.d-flex.flex-column
+            .description-gbo__top
+                .row.description-gbo__wrapper.description-gbo__wrapper--padding
+                    .col-lg-12.col-xl-12.d-flex
+                        h2.section-title Сеть АГЗС
+                .row.description-gbo__group
+                    img.col-12.col-xl-6.col-lg-12.d-none.d-xl-block(src="img/station.jpg", alt="Газовоз")
+                    .description-gbo__right.col-12.col-xl-5.col-lg-12.d-flex.flex-column.justify-content-between.align-items-start
+                        .col-xl-10.col-lg-12.p-0
+                            h3 Карта сети газовых заправок РОСГАЗ по СПб, Ленинградской области, Карелии, Мурманску и Мурманской области
+                            img.d-block.d-xl-none(src="img/station.jpg", alt="Газовоз")
+                            p Компания РОСГАЗ за последние несколько лет открыла большое количество современных газовых заправок на территории Санкт-Петербурга, Ленинградской области, Республики Карелия, Мурманска и Мурманской области.
+                            p На заправках действует наличный и безналичный расчет, а также специальный расчет для корпоративных клиентов. На каждой АГЗС Вы можете заправить свой автомобиль, заправить газовый баллон.
+    .table-location
+        .container
+            .table-responsive-lg.table-wrapper
+                    table.table
+                        thead
+                            tr
+                                th(scope="col") #
+                                th(scope="col") Название
+                                th(scope="col") Адрес
+                                th.text-center(scope="col") GPS координаты
+                                th(scope="col") Режим работы
+                        tbody
+                                tr
+                                    th 1
+                                    td АГЗС Тепличный
+                                    td Петрозаводск, Шуйское шоссе, 18
+                                    td.text-center
+                                        button
+                                            +icon("copy") 
+                                    td с 06:00 до 23:45
+                                tr
+                                    th 2
+                                    td АГЗС Сулажгора
+                                    td Петрозаводск, ул. Новосулажгорская, 20
+                                    td.text-center
+                                        button
+                                            +icon("copy") 
+                                    td с 06:00 до 23:45
+                                tr
+                                    th 3
+                                    td АГЗС Чапаева
+                                    td Петрозаводск, Чапаева, д. 3
+                                    td.text-center
+                                        button
+                                            +icon("copy") 
+                                    td с 06:00 до 23:45
+                                tr
+                                    th 4
+                                    td АГЗС Древлянка
+                                    td Петрозаводск, ул. Попова, 5
+                                    td.text-center
+                                        button
+                                            +icon("copy") 
+                                    td с 06:00 до 23:45
+                                tr
+                                    th 5
+                                    td АГЗС Заводская
+                                    td Петрозаводск, Заводская 5с1
+                                    td.text-center
+                                        button
+                                            +icon("copy") 
+                                    td с 06:00 до 23:45
+                                tr
+                                    th 6
+                                    td АГЗС Ригачина
+                                    td Петрозаводск, ул. Ригачина 27б
+                                    td.text-center
+                                        button
+                                            +icon("copy") 
+                                    td с 06:00 до 23:45
+                                tr
+                                    th 7
+                                    td АГЗС Вытегорское
+                                    td Петрозаводск, Вытегорское шоссе, д.51
+                                    td.text-center
+                                        button
+                                            +icon("copy") 
+                                    td с 06:00 до 23:45
+            
+    include components/_map
+    include components/_request
+
+    block scripts

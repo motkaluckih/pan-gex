@@ -1,0 +1,58 @@
+.company {
+    &__wrapper {
+        padding: 0;
+    }
+    &__bottom {
+        margin-top: auto;
+    }
+    &__right {
+        gap: 5px;
+    }
+    &__img-mobile {
+        display: none;
+        @include media-breakpoint-down(xl) {
+			display: block;
+		}
+    }
+    &__btn-dom {
+        display: flex;
+        padding-top: 40px;
+        align-items: center;
+        gap: 20px;
+        @include media-breakpoint-down(xl) {
+			padding-top: 24px;
+		}
+    }
+    &__img {
+        // padding: 0;
+        @include media-breakpoint-down(xl) {
+			display: none;
+		}
+        @include media-breakpoint-down(xl) {
+			max-height: 255px;
+		}
+    }
+    img {
+        // padding: 0;
+        width: 100%;
+    }
+    p {
+        max-width: 314px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0.2px;
+    }
+    h2 {
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 42px;
+        letter-spacing: -0.288px;
+            @include media-breakpoint-down(xl) {
+                padding-top: 10px;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 26px;
+            }
+    }
+}

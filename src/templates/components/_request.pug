@@ -1,0 +1,18 @@
+section.section.request
+  .container
+    .row.align-items-center
+      .col-12.col-md-10.col-lg-7.col-xxl-6
+        h2.section-title.section__title.request__title Бесплатная консультация
+        p.section-subtext.section__subtext.request__subtext Проконсультируем Вас по вопросам установки системы автономной газификации и доставки газа в Ленинградской области.
+      .col-12.col-lg-4.offset-xl-2.col-xl-3
+        if currentPage === "gasification"
+            button.button.button--large.request__btn.button--green Заказать звонок 
+        else if currentPage === "installation"
+            button.button.button--large.request__btn.button--green Заказать звонок
+        else if currentPage === "delivery"
+            button.button.button--large.request__btn.button--orange Заказать звонок
+        else if currentPage === "gas_station_chain"
+            button.button.button--large.request__btn.button--blue Заказать звонок
+        else 
+            button.button.button--large.request__btn.button--orange Заказать звонок
+  +position-background("right-reguest", 'icon-background')

@@ -1,0 +1,266 @@
+extends layouts/_default
+
+block vars
+    - let currentPage = "index";
+    - let pageTitle = "Главная страница";
+
+block content
+
+    section.page-top.page-top__main
+        .container
+            .row
+                .col-12
+                    h1.page-top__title.page-title-main Доставка газа
+                    .breadcrumbs
+                        ul.breadcrumbs__list.breadcrumbs__list-main
+                            li                
+                                button 
+                                    <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="56" y="56" width="56" height="56" rx="28" transform="rotate(180 56 56)" fill="white"/>
+                                    <path d="M22 27L28 33L34 27" stroke="#1A2141" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                            li
+                                span в Санкт-Петербурге и Ленинградской области
+        +position-background("pattern", 'icon-background')
+    section.services-preview.section
+        .container
+            .services-preview__wrapper
+                .row
+                    .col-12.d-flex.align-items-center.services-preview__top-p-0
+                        .col-6.d-flex
+                            h2.section-title.section__title Услуги
+                        .col-6.d-flex.section__left.d-flex.justify-content-between.align-items-center.ps-0
+                                a  перейти в раздел
+                                .services-preview__btn-dom.d-flex-gap
+                                .services-preview__dots-inner.slider-dots
+                    .col-12.slider.services-preview__slider 
+                        ul.slider-wrapper.justify-content-between 
+                            li.col-12.col-lg-6.hero-slider.d-flex.justify-content-between.d-flex.flex-column.flex-xl-row.flex-lg-column  
+                                .col-6.col-xl-6.col-lg-12.services-preview__main
+                                    h3 Перевод авто на газ                
+                                    p Экономия на топливе до 50%.
+                                    span Скидки для предприятий. Рассрочка
+                                    .col-6.col-xl-6.col-lg-12.services-preview__btn-block.d-flex.align-items-center
+                                        button.button--main.button--orange  
+                                            +icon('menu-arrow')
+                                        span Подробнее
+                                .col-6.col-xl-6.col-lg-12.services-preview__img
+                                    img(src="img/services-preview.jpg", alt="Перевод авто на газ")
+                            li.col-12.col-lg-6.hero-slider.d-flex.justify-content-between.d-flex.flex-column.flex-xl-row.flex-lg-column  
+                                .col-6.col-xl-6.col-lg-12.services-preview__main
+                                    h3 Перевод авто на газ                
+                                    p Экономия на топливе до 50%.
+                                    span Скидки для предприятий. Рассрочка
+                                    .col-6.col-xl-6.col-lg-12.services-preview__btn-block.d-flex.align-items-center
+                                        button.button--main.button--orange  
+                                            +icon('menu-arrow')
+                                        span Подробнее
+                                .col-6.col-xl-6.col-lg-12.services-preview__img
+                                    img(src="img/services-preview.jpg", alt="Перевод авто на газ")
+                            li.col-12.col-lg-6.hero-slider.d-flex.justify-content-between.d-flex.flex-column.flex-xl-row.flex-lg-column  
+                                .col-6.col-xl-6.col-lg-12.services-preview__main
+                                    h3 Перевод авто на газ                
+                                    p Экономия на топливе до 50%.
+                                    span Скидки для предприятий. Рассрочка
+                                    .col-6.col-xl-6.col-lg-12.services-preview__btn-block.d-flex.align-items-center
+                                        button.button--main.button--orange  
+                                            +icon('menu-arrow')
+                                        span Подробнее
+                                .col-6.col-xl-6.col-lg-12.services-preview__img
+                                    img(src="img/services-preview.jpg", alt="Перевод авто на газ")
+                            li.col-12.col-lg-6.hero-slider.d-flex.justify-content-between.d-flex.flex-column.flex-xl-row.flex-lg-column  
+                                .col-6.col-xl-6.col-lg-12.services-preview__main
+                                    h3 Перевод авто на газ                
+                                    p Экономия на топливе до 50%.
+                                    span Скидки для предприятий. Рассрочка
+                                    .col-6.col-xl-6.col-lg-12.services-preview__btn-block.d-flex.align-items-center
+                                        button.button--main.button--orange  
+                                            +icon('menu-arrow')
+                                        span Подробнее
+                                .col-6.col-xl-6.col-lg-12.services-preview__img
+                                    img(src="img/services-preview.jpg", alt="Перевод авто на газ")
+                            li.col-12.col-lg-6.hero-slider.d-flex.justify-content-between.d-flex.flex-column.flex-xl-row.flex-lg-column  
+                                .col-6.col-xl-6.col-lg-12.services-preview__main
+                                    h3 Перевод авто на газ                
+                                    p Экономия на топливе до 50%.
+                                    span Скидки для предприятий. Рассрочка
+                                    .col-6.col-xl-6.col-lg-12.services-preview__btn-block.d-flex.align-items-center
+                                        button.button--main.button--orange  
+                                            +icon('menu-arrow')
+                                        span Подробнее
+                                .col-6.col-xl-6.col-lg-12.services-preview__img
+                                    img(src="img/services-preview.jpg", alt="Перевод авто на газ")
+    section.about-us
+        .container
+            .about-us__container 
+                .row.col12        
+                    p Наша компания постоянно растет и&nbsp;прогрессирует, не&nbsp;собираясь останавливаться на&nbsp;достигнутом. Мы&nbsp;открываем десятки новых АГЗС
+    section.company.section
+        .container
+            .company__container
+                .row.company__wrapper.col-md-12.d-flex.justify-content-between
+                    .company__img.col-6.col-lg-6
+                        img(src="img/company.jpg", alt="заправка газгольдеров")
+                    .company__right.col-xl-5.col-md-12.d-flex.flex-column    
+                        p Газовая компания PANEX качественно выполнит монтаж подземного или наземного резервуара для сжиженного газа (газгольдера или мини-газгольдера)
+                        .company__bottom
+                            .company__img-mobile
+                                img(src="img/company.jpg", alt="заправка газгольдеров")
+                            h2 Установка газгольдера от&nbsp;99&nbsp;000&nbsp;₽
+                            .company__btn-dom
+                                button.button--main.button--orange  
+                                    +icon('menu-arrow')
+                                span Подробнее
+    section.calculator.section
+                .container
+                    .section__top.calculator__top
+                        .row
+                            .col-12.d-flex.align-items-center
+                                h2.section-title.section__title Калькулятор окупаемости
+                            //- .col-12.col-lg-9.col-xl-6
+                            //-     p.section-subtext.section__subtext Узнайте, сколько вы будете экономить на топливе после установки ГБО в РОСГАЗ
+                    .calculator-form
+                        .row
+                            .col-12.col-lg-6.col-xl-6
+                                label.form-label
+                                    span Бензин для заправки
+                                select.form-select
+                                    option(value='1') АИ-95
+                                    option(value='2') АИ-92
+
+                                label.form-label
+                                    span Количество автомобилей
+                                select.form-select
+                                    option(value='1') 1
+                                    option(value='2') 2
+                                    option(value='3') 3
+                                    option(value='4') 4
+                                    option(value='5') 5
+                                    option(value='6') 6
+                                    option(value='7') 7
+                                    option(value='8') 8
+                                    option(value='9') 9
+                                    option(value='10') 10
+
+                                label.form-label
+                                    span Расход топлива на 100 км (л)
+                                .from-slider.from-slider-red
+                                    input.from-slider__input(type='text' value="12")
+                                    input.form-slider__range(type='range' step='1' min='7' max='35' value='12')
+                                label.form-label
+                                    span Пробег в год (км)
+                                .from-slider.from-slider-red
+                                    input.from-slider__input(type='text' value="40000")
+                                    input.form-slider__range(type='range' step='10000' min='20000' max='100000' value='40000')
+
+                            .col-12.col-xl-5.col-lg-6.offset-xl-1
+                                .calculator-form__box
+                                    .calculator-form__group
+                                        p Экономия в год <span class="number"><span>104 000</span> ₽</span>
+                                        span.calculator-form__descr Мы&nbsp;открываем десятки новых АГЗС, расширяем географию доставки сжиженного газа
+                                    .calculator-form__group
+                                        p Экономия за 5 лет <span class="number"><span>520 000</span> ₽</span>
+                                        span.calculator-form__descr Мы&nbsp;открываем десятки новых АГЗС, расширяем географию доставки сжиженного газа
+                                    .calculator-form__group.calculator-form__group--blue
+                                        p Срок окупаемости <span class="number"><span>4</span> месяца</span>
+                                        span.calculator-form__descr Мы&nbsp;открываем десятки новых АГЗС, расширяем географию доставки сжиженного газа
+                                    button.button.button--orange.button--large.calculator-form__submit(type="submit") Начать экономить
+    section.news.section
+        .container
+            .news__top
+                .row
+                    .col-12.d-flex.align-items-center.p-0.justify-content-cente
+                        .col-12.col-xl-6.d-flex
+                            h2.section-title последние новости
+                        .col-12.col-xl-6.d-flex.section__left.d-flex.justify-content-between.align-items-center
+                                a  перейти в раздел
+                                .news-btn-dom.d-flex-gap
+                                .news-dots-inner.slider-dots
+                    .slider.news__item 
+                        ul.slider-wrapper.justify-content-between 
+                            li.col-xl-4.col-lg-12.hero-slider.d-flex.flex-column 
+                                img(src="img/news1.jpg", alt="ГК «Росгаз» провела ребрендинг")
+                                
+                                p.d-flex.justify-content-between                   
+                                    span.news__gold Новости
+                                    span 6 июн 2023
+                                h3 ГК «Росгаз» провела ребрендинг и поменяла своё название
+                                .news__btn-block
+                                    button   
+                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="40" y="40" width="40" height="40" rx="20" transform="rotate(180 40 40)" fill="#E94E1B"/>
+                                        <path d="M18.5 25L23.5 20L18.5 15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    span Подробнее
+                            li.col-xl-8.col-lg-12.hero-slider.d-flex.flex-column 
+                                img(src="img/news2.jpg", alt="Фото человека с калькулятором")
+                                
+                                p.d-flex.justify-content-between                   
+                                    span.news__gold Новости
+                                    span 3 июн 2023
+                                h3 Экономим деньги с ГБО
+                                .news__btn-block
+                                    button   
+                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="40" y="40" width="40" height="40" rx="20" transform="rotate(180 40 40)" fill="#E94E1B"/>
+                                        <path d="M18.5 25L23.5 20L18.5 15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    span Подробнее
+                            li.col-xl-4.col-lg-12.hero-slider.d-flex.flex-column 
+                                img(src="img/news1.jpg", alt="ГК «Росгаз» провела ребрендинг")
+                                
+                                p.d-flex.justify-content-between                   
+                                    span.news__gold Новости
+                                    span 6 июн 2023
+                                h3 ГК «Росгаз» провела ребрендинг и поменяла своё название
+                                .news__btn-block
+                                    button   
+                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="40" y="40" width="40" height="40" rx="20" transform="rotate(180 40 40)" fill="#E94E1B"/>
+                                        <path d="M18.5 25L23.5 20L18.5 15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    span Подробнее
+                            li.col-xl-8.col-lg-12.hero-slider.d-flex.flex-column 
+                                img(src="img/news2.jpg", alt="Фото человека с калькулятором")
+                                
+                                p.d-flex.justify-content-between                   
+                                    span.news__gold Новости
+                                    span 3 июн 2023
+                                h3 Экономим деньги с ГБО
+                                .news__btn-block
+                                    button   
+                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="40" y="40" width="40" height="40" rx="20" transform="rotate(180 40 40)" fill="#E94E1B"/>
+                                        <path d="M18.5 25L23.5 20L18.5 15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                span Подробнее
+                            li.col-xl-4.col-lg-12.hero-slider.d-flex.flex-column 
+                                img(src="img/news1.jpg", alt="ГК «Росгаз» провела ребрендинг")
+                                
+                                p.d-flex.justify-content-between                   
+                                    span.news__gold Новости
+                                    span 6 июн 2023
+                                h3 ГК «Росгаз» провела ребрендинг и поменяла своё название
+                                .news__btn-block
+                                    button   
+                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="40" y="40" width="40" height="40" rx="20" transform="rotate(180 40 40)" fill="#E94E1B"/>
+                                        <path d="M18.5 25L23.5 20L18.5 15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    span Подробнее
+                            li.col-xl-8.col-lg-12.hero-slider.d-flex.flex-column 
+                                img(src="img/news2.jpg", alt="Фото человека с калькулятором")    
+                                
+                                p.d-flex.justify-content-between                   
+                                    span.news__gold Новости
+                                    span 3 июн 2023
+                                h3 Экономим деньги с ГБО
+                                .news__btn-block
+                                    button   
+                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="40" y="40" width="40" height="40" rx="20" transform="rotate(180 40 40)" fill="#E94E1B"/>
+                                        <path d="M18.5 25L23.5 20L18.5 15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    span Подробнее
+
+    include components/_request
